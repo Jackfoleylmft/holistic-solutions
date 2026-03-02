@@ -1,5 +1,4 @@
 import { services } from '@/lib/services'
-import { cities } from '@/lib/cities'
 import { posts } from '@/lib/posts'
 
 export default function sitemap() {
@@ -23,19 +22,13 @@ export default function sitemap() {
     priority: 0.85,
   }))
 
-  const cityPages = cities.map((c) => ({
-    url: `${base}/locations/${c.slug}`,
-    changeFrequency: 'monthly',
-    priority: 0.75,
-  }))
-
   const blogPages = posts.map((p) => ({
     url: `${base}/blog/${p.slug}`,
     changeFrequency: 'monthly',
     priority: 0.65,
   }))
 
-  return [...staticPages, ...servicePages, ...cityPages, ...blogPages].map((p) => ({
+  return [...staticPages, ...servicePages, ...blogPages].map((p) => ({
     ...p,
     lastModified: new Date(),
   }))
