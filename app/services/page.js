@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <section style={{ borderTop: 'none', paddingTop: '0' }}>
         <div className="services-grid">
           {services.map((s) => (
-            <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none' }}>
+            <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="service-card" style={{ height: '100%', cursor: 'pointer' }}>
                 <div className="service-num">{s.num}</div>
                 <h3>{s.shortTitle}</h3>

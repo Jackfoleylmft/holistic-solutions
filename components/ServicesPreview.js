@@ -16,7 +16,7 @@ export default function ServicesPreview() {
       </div>
       <div className="services-grid">
         {services.slice(0, 4).map((s) => (
-          <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none' }}>
+          <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="service-card" style={{ height: '100%' }}>
               <div className="service-num">{s.num}</div>
               <h3>{s.shortTitle}</h3>

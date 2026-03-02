@@ -97,7 +97,7 @@ export default function ServicePage({ params }) {
             .filter((s) => s.slug !== service.slug)
             .slice(0, 3)
             .map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none' }}>
+              <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="service-card" style={{ height: '100%' }}>
                   <div className="service-num">{s.num}</div>
                   <h3>{s.shortTitle}</h3>
