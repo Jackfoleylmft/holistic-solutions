@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Founder() {
   return (
     <section id="founder">
@@ -10,8 +12,13 @@ export default function Founder() {
       <div className="founder-layout">
         <div className="founder-identity">
           <div className="founder-avatar">
-            <span className="founder-avatar-initials">JF</span>
-            <span className="founder-avatar-note">Photo coming soon</span>
+            <Image
+              src="/jack-foley.png"
+              alt="Jack Foley, LMFT — Founder of Holistic Solutions"
+              fill
+              style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              priority
+            />
           </div>
           <p className="founder-name">Jack Foley</p>
           <p className="founder-title">Founder &amp; Clinical Director</p>
