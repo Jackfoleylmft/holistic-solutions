@@ -130,6 +130,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N3BJGHJ6C" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-9N3BJGHJ6C');
+            `,
+          }}
+        />
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Los Angeles, California" />
         <meta name="geo.position" content="34.0522;-118.2437" />
