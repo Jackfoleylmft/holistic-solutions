@@ -29,6 +29,9 @@ export const metadata = {
     'clinical case management, substance use case manager, mental health case management, co-occurring disorders, clinical intervention services, masters level interventionist, licensed clinician intervention, treatment placement, recovery coaching, companionship services, sober coaching, safe clinical transport, behavioral health case management, nationwide case management, substance abuse help, addiction case manager',
   authors: [{ name: 'Holistic Solutions LLC' }],
   robots: 'index, follow',
+  verification: {
+    google: '276MvZQU8uXctJ2kzuTIr7Z0I7kl2smLuOPg4zSTiuA',
+  },
   alternates: {
     canonical: '/',
   },
