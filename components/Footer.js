@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer>
@@ -6,8 +8,8 @@ export default function Footer() {
         Nationwide · All rights reserved.
       </p>
       <p>
-        <a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> ·{' '}
-        <a href="#">HIPAA Notice</a>
+        <Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms of Service</Link> ·{' '}
+        <Link href="/hipaa">HIPAA Notice</Link>
       </p>
     </footer>
   )

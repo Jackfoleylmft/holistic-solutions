@@ -1012,6 +1012,49 @@ footer a:hover { color: var(--clay); }
   .founder-avatar { aspect-ratio: 1/1; max-width: 220px; }
 }
 
+/* ── LEGAL PAGES ── */
+.legal-page { background: var(--white); }
+.legal-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.legal-content p {
+  font-size: 0.95rem;
+  color: var(--smoke);
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+.legal-content h2 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--dusk);
+  letter-spacing: 0.01em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--sans);
+}
+.legal-content h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--dusk);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.legal-content ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.legal-content ul li {
+  font-size: 0.9rem;
+  color: var(--smoke);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
 /* ── GRAIN TEXTURE OVERLAY ── */
 body::after {
   content: '';
