@@ -159,10 +159,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <CrisisBar />
         <Nav />
         <main>{children}</main>
         <Footer />
+        <CrisisBar />
         <FloatingCTA />
       </body>
     </html>

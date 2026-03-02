@@ -40,7 +40,7 @@ body {
 /* ── NAV ── */
 nav {
   position: fixed;
-  top: 36px; left: 0; right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   background: rgba(242, 237, 228, 0.93);
   backdrop-filter: blur(12px);
@@ -633,7 +633,7 @@ footer a:hover { color: var(--clay); }
 /* ── MOBILE MENU ── */
 .mobile-menu {
   position: fixed;
-  top: 96px;
+  top: 64px;
   left: 0;
   right: 0;
   background: var(--dusk);
@@ -683,7 +683,7 @@ footer a:hover { color: var(--clay); }
   }
   h1 { text-shadow: 0 1px 12px rgba(242,237,228,0.6); }
   .crisis-bar { font-size: 0.75rem; }
-  nav { top: 32px; }
+  nav { top: 0; }
   nav ul { display: none; }
   .hamburger { display: flex; }
   #services .section-head,
