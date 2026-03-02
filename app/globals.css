@@ -97,14 +97,21 @@ nav a:hover { color: var(--adobe); }
   padding: 140px 5vw 100px;
   position: relative;
   overflow: hidden;
+  background-image: url('/hero-bg.jpg');
+  background-size: cover;
+  background-position: center 45%;
+  background-repeat: no-repeat;
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 70% at 80% 50%, rgba(196,168,130,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(139,111,78,0.1) 0%, transparent 60%);
+    linear-gradient(to right,
+      rgba(242,237,228,0.92) 0%,
+      rgba(242,237,228,0.75) 45%,
+      rgba(242,237,228,0.35) 100%),
+    radial-gradient(ellipse 60% 70% at 80% 50%, rgba(196,168,130,0.2) 0%, transparent 70%);
   pointer-events: none;
 }
 .hero-inner { max-width: 700px; position: relative; }
