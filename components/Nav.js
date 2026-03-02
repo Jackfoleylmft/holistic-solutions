@@ -1,14 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 const links = [
-  { href: '#services', label: 'Services' },
-  { href: '#who-we-serve', label: 'Who We Serve' },
-  { href: '#process', label: 'Process' },
-  { href: '#about', label: 'About' },
-  { href: '#founder', label: 'Our Founder' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/faq', label: 'FAQ' },
 ]
 
 export default function Nav() {
@@ -19,14 +17,14 @@ export default function Nav() {
   return (
     <>
       <nav>
-        <a href="#home" className="logo">
+        <Link href="/" className="logo">
           Holistic <span>Solutions</span>
-        </a>
+        </Link>
         <ul>
           {links.map((l) => (
-            <li key={l.href}><a href={l.href}>{l.label}</a></li>
+            <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
           ))}
-          <li><a href="#contact" className="nav-cta">Get Started</a></li>
+          <li><Link href="/contact" className="nav-cta">Get Started</Link></li>
         </ul>
         <button
           className={`hamburger${open ? ' open' : ''}`}
@@ -41,9 +39,9 @@ export default function Nav() {
 
       <div className={`mobile-menu${open ? ' open' : ''}`}>
         {links.map((l) => (
-          <a key={l.href} href={l.href} onClick={close}>{l.label}</a>
+          <Link key={l.href} href={l.href} onClick={close}>{l.label}</Link>
         ))}
-        <a href="#contact" className="mobile-cta" onClick={close}>Get Started</a>
+        <Link href="/contact" className="mobile-cta" onClick={close}>Get Started</Link>
       </div>
     </>
   )

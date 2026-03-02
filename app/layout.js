@@ -1,5 +1,9 @@
 import { Cormorant_Garamond, Jost } from 'next/font/google'
 import './globals.css'
+import CrisisBar from '@/components/CrisisBar'
+import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
+import FloatingCTA from '@/components/FloatingCTA'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -154,7 +158,13 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFaq) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <CrisisBar />
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+        <FloatingCTA />
+      </body>
     </html>
   )
 }
