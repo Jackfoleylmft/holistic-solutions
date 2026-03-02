@@ -22,9 +22,9 @@ const jost = Jost({
 
 export const metadata = {
   metadataBase: new URL('https://hscasemanagement.com'),
-  title: 'Holistic Solutions | Clinical Case Management – Nationwide Services',
+  title: 'Holistic Solutions Case Management | Clinical Case Management – Nationwide',
   description:
-    'Holistic Solutions provides clinical case management for substance use, mental health, co-occurring disorders, and intervention services across the United States. Headquartered in Los Angeles, CA.',
+    'Holistic Solutions Case Management provides clinical case management for substance use, mental health, co-occurring disorders, and intervention services across the United States. Headquartered in Los Angeles, CA.',
   keywords:
     'clinical case management, substance use case manager, mental health case management, co-occurring disorders, clinical intervention services, masters level interventionist, licensed clinician intervention, treatment placement, recovery coaching, companionship services, sober coaching, safe clinical transport, behavioral health case management, nationwide case management, substance abuse help, addiction case manager',
   authors: [{ name: 'Holistic Solutions LLC' }],
@@ -36,7 +36,7 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Holistic Solutions | Clinical Case Management – Nationwide',
+    title: 'Holistic Solutions Case Management | Clinical Case Management – Nationwide',
     description:
       'Individualized case management for substance use, mental health, co-occurring disorders, and intervention services. Serving clients across the United States.',
     type: 'website',
@@ -45,7 +45,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Holistic Solutions | Clinical Case Management – Nationwide',
+    title: 'Holistic Solutions Case Management | Clinical Case Management – Nationwide',
     description:
       'Individualized case management for substance use, mental health, co-occurring disorders, and intervention services. Serving clients across the United States.',
   },
@@ -54,7 +54,7 @@ export const metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  name: 'Holistic Solutions LLC',
+  name: 'Holistic Solutions Case Management',
   description:
     'Nationwide clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, California.',
   url: 'https://hscasemanagement.com',

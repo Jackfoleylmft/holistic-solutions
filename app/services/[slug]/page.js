@@ -11,7 +11,7 @@ export function generateMetadata({ params }) {
   const service = getServiceBySlug(params.slug)
   if (!service) return {}
   return {
-    title: `${service.title} | Holistic Solutions`,
+    title: `${service.title} | Holistic Solutions Case Management`,
     description: service.metaDescription,
     keywords: service.keywords,
   }

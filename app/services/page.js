@@ -3,7 +3,7 @@ import { services } from '@/lib/services'
 import PageHeader from '@/components/PageHeader'
 
 export const metadata = {
-  title: 'Services | Holistic Solutions — Clinical Case Management',
+  title: 'Services | Holistic Solutions Case Management',
   description: 'Comprehensive clinical case management services including substance use, mental health, co-occurring disorders, intervention, treatment placement, recovery coaching, and more. Nationwide.',
 }
 
