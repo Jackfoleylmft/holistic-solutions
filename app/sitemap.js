@@ -1,4 +1,6 @@
 import { services } from '@/lib/services'
+import { cities } from '@/lib/cities'
+import { posts } from '@/lib/posts'
 
 export default function sitemap() {
   const base = 'https://hscasemanagement.com'
@@ -9,6 +11,7 @@ export default function sitemap() {
     { url: `${base}/about`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/faq`, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/contact`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/blog`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${base}/privacy`, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${base}/terms`, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${base}/hipaa`, changeFrequency: 'yearly', priority: 0.3 },
@@ -20,7 +23,19 @@ export default function sitemap() {
     priority: 0.85,
   }))
 
-  return [...staticPages, ...servicePages].map((p) => ({
+  const cityPages = cities.map((c) => ({
+    url: `${base}/locations/${c.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.75,
+  }))
+
+  const blogPages = posts.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.65,
+  }))
+
+  return [...staticPages, ...servicePages, ...cityPages, ...blogPages].map((p) => ({
     ...p,
     lastModified: new Date(),
   }))

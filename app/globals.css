@@ -1066,6 +1066,57 @@ footer a:hover { color: var(--clay); }
   font-weight: 300;
 }
 
+/* ── BLOG ── */
+.blog-empty { max-width: 600px; }
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.blog-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: background 0.2s;
+}
+.blog-card:hover { background: var(--sand); }
+.blog-card-category {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--adobe);
+  font-weight: 500;
+}
+.blog-card-title {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--dusk);
+  line-height: 1.3;
+}
+.blog-card-excerpt {
+  font-size: 0.875rem;
+  color: var(--smoke);
+  line-height: 1.75;
+  font-weight: 300;
+  flex: 1;
+}
+.blog-card-date {
+  font-size: 0.75rem;
+  color: var(--clay);
+  letter-spacing: 0.05em;
+  font-weight: 300;
+}
+
+/* ── CITY PAGES ── */
+.city-local { max-width: 680px; }
+
 /* ── GRAIN TEXTURE OVERLAY ── */
 body::after {
   content: '';
