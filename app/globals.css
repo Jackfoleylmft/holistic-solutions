@@ -678,6 +678,10 @@ footer a:hover { color: var(--clay); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  .hero::before {
+    background: rgba(242,237,228,0.82);
+  }
+  h1 { text-shadow: 0 1px 12px rgba(242,237,228,0.6); }
   .crisis-bar { font-size: 0.75rem; }
   nav { top: 32px; }
   nav ul { display: none; }
