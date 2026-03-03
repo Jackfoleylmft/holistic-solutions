@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { services, getServiceBySlug } from '@/lib/services'
+import { posts } from '@/lib/posts'
 import { SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 import HomeCTA from '@/components/HomeCTA'
 
@@ -22,6 +23,10 @@ export function generateMetadata({ params }) {
 export default function ServicePage({ params }) {
   const service = getServiceBySlug(params.slug)
   if (!service) notFound()
+
+  const relatedPosts = posts
+    .filter((p) => p.relatedServices && p.relatedServices.includes(service.slug))
+    .slice(0, 3)
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -137,6 +142,22 @@ export default function ServicePage({ params }) {
             ))}
         </div>
       </section>
+
+      {relatedPosts.length > 0 && (
+        <section>
+          <p className="section-label">Related Reading</p>
+          <h2>From the blog</h2>
+          <div className="blog-grid" style={{ marginTop: '2.5rem' }}>
+            {relatedPosts.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="blog-card">
+                <p className="blog-card-category">{post.category}</p>
+                <h3 className="blog-card-title">{post.title}</h3>
+                <p className="blog-card-excerpt">{post.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <HomeCTA />
     </>

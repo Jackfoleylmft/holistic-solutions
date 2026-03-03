@@ -57,13 +57,14 @@ export const metadata = {
 
 const schemaOrg = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
+  '@type': ['MedicalBusiness', 'ProfessionalService'],
   name: BUSINESS_NAME,
   description:
     'Nationwide clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, California.',
   url: SITE_URL,
   telephone: '+17024947641',
   email: EMAIL,
+  priceRange: '$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Los Angeles',
@@ -87,6 +88,24 @@ const schemaOrg = {
     name: 'Jack Foley',
     jobTitle: 'Founder and Clinical Director',
     hasCredential: ['LMFT', 'M.S. Clinical Psychology', 'B.S. Psychology'],
+  },
+  sameAs: [
+    'https://www.linkedin.com/in/jack-foley-m-a-lmft-25a462133/',
+    // Add Psychology Today, CAMFT, AAMFT, GBP profile URLs as they go live
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Clinical Case Management Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Substance Use Case Management', url: `${SITE_URL}/services/substance-use` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mental Health Case Management', url: `${SITE_URL}/services/mental-health` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Co-Occurring Disorders Case Management', url: `${SITE_URL}/services/co-occurring-disorders` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Clinical Intervention Services', url: `${SITE_URL}/services/intervention-services` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Treatment Placement Services', url: `${SITE_URL}/services/treatment-placement` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Recovery Coaching', url: `${SITE_URL}/services/recovery-coaching` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Companionship & Support Services', url: `${SITE_URL}/services/companionship-support` } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Safe & Clinical Transport', url: `${SITE_URL}/services/safe-transport` } },
+    ],
   },
 }
 
