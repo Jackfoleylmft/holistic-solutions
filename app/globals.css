@@ -1022,23 +1022,7 @@ footer a:hover { color: var(--clay); }
   overflow: hidden;
   position: relative;
 }
-.founder-avatar-initials {
-  font-family: var(--serif);
-  font-size: 4rem;
-  color: var(--clay);
-  opacity: 0.5;
-  user-select: none;
-}
-.founder-avatar-note {
-  position: absolute;
-  bottom: 1rem;
-  left: 0; right: 0;
-  text-align: center;
-  font-size: 0.68rem;
-  color: var(--smoke);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
+
 .founder-name {
   font-family: var(--serif);
   font-size: 1.5rem;

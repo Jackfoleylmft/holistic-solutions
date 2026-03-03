@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { services } from '@/lib/services'
 import PageHeader from '@/components/PageHeader'
+import WhoWeServe from '@/components/WhoWeServe'
 
 export const metadata = {
   title: 'Services | Holistic Solutions Case Management',
@@ -32,6 +33,7 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+      <WhoWeServe />
     </>
   )
 }

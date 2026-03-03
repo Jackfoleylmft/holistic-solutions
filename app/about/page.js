@@ -1,5 +1,6 @@
 import About from '@/components/About'
 import Founder from '@/components/Founder'
+import Process from '@/components/Process'
 
 export const metadata = {
   title: 'About | Holistic Solutions Case Management — Jack Foley, LMFT',
@@ -12,6 +13,7 @@ export default function AboutPage() {
     <>
       <About />
       <Founder />
+      <Process />
     </>
   )
 }

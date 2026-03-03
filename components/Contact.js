@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { PHONE_DISPLAY, PHONE_HREF, EMAIL } from '@/lib/constants'
+import { PHONE_DISPLAY, PHONE_HREF, EMAIL, HOURS } from '@/lib/constants'
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xreavvjn'
 
@@ -56,7 +56,7 @@ export default function Contact() {
           </div>
           <div className="contact-item">
             <h4>Hours</h4>
-            <p>Monday – Friday, 8am – 6pm<br />Urgent consultations by appointment</p>
+            <p>{HOURS}<br />Urgent consultations by appointment</p>
           </div>
           <div className="contact-item">
             <h4>Crisis Line</h4>

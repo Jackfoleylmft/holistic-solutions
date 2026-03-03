@@ -5,7 +5,7 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
 import AnimationObserver from '@/components/AnimationObserver'
-import { PHONE_HREF, EMAIL, SITE_URL } from '@/lib/constants'
+import { PHONE_HREF, EMAIL, SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -58,7 +58,7 @@ export const metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  name: 'Holistic Solutions Case Management',
+  name: BUSINESS_NAME,
   description:
     'Nationwide clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, California.',
   url: SITE_URL,
