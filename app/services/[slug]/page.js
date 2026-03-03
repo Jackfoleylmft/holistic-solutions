@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { services, getServiceBySlug } from '@/lib/services'
+import { SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 import HomeCTA from '@/components/HomeCTA'
 
 export function generateStaticParams() {
@@ -14,7 +15,7 @@ export function generateMetadata({ params }) {
     title: `${service.title} | Holistic Solutions Case Management`,
     description: service.metaDescription,
     keywords: service.keywords,
-    alternates: { canonical: `https://hscasemanagement.com/services/${service.slug}` },
+    alternates: { canonical: `${SITE_URL}/services/${service.slug}` },
   }
 }
 
@@ -22,18 +23,34 @@ export default function ServicePage({ params }) {
   const service = getServiceBySlug(params.slug)
   if (!service) notFound()
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.metaDescription,
+    url: `${SITE_URL}/services/${service.slug}`,
+    provider: {
+      '@type': 'Organization',
+      name: BUSINESS_NAME,
+      url: SITE_URL,
+    },
+    areaServed: { '@type': 'Country', name: 'United States' },
+    serviceType: 'Clinical Case Management',
+  }
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://hscasemanagement.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://hscasemanagement.com/services' },
-      { '@type': 'ListItem', position: 3, name: service.title, item: `https://hscasemanagement.com/services/${service.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+      { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}/services/${service.slug}` },
     ],
   }
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Page header */}

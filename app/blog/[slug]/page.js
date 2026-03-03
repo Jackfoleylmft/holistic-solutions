@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { posts, getPostBySlug } from '@/lib/posts'
 import { services } from '@/lib/services'
+import { SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 import HomeCTA from '@/components/HomeCTA'
 
 export function generateStaticParams() {
@@ -15,7 +16,7 @@ export function generateMetadata({ params }) {
   return {
     title: `${post.title} | Holistic Solutions Case Management`,
     description: post.metaDescription || post.excerpt.substring(0, 155),
-    alternates: { canonical: `https://hscasemanagement.com/blog/${post.slug}` },
+    alternates: { canonical: `${SITE_URL}/blog/${post.slug}` },
     openGraph: {
       type: 'article',
       publishedTime: post.date,
@@ -42,20 +43,21 @@ export default function BlogPostPage({ params }) {
     description: post.metaDescription || post.excerpt.substring(0, 155),
     datePublished: post.date,
     dateModified: post.date,
+    ...(post.image && { image: `${SITE_URL}${post.image}` }),
     author: {
       '@type': 'Person',
       name: 'Jack Foley',
       jobTitle: 'Licensed Marriage and Family Therapist',
-      url: 'https://hscasemanagement.com/about',
+      url: `${SITE_URL}/about`,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Holistic Solutions Case Management',
-      url: 'https://hscasemanagement.com',
+      name: BUSINESS_NAME,
+      url: SITE_URL,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://hscasemanagement.com/blog/${post.slug}`,
+      '@id': `${SITE_URL}/blog/${post.slug}`,
     },
   }
 
@@ -63,9 +65,9 @@ export default function BlogPostPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://hscasemanagement.com' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://hscasemanagement.com/blog' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://hscasemanagement.com/blog/${post.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}` },
     ],
   }
 
