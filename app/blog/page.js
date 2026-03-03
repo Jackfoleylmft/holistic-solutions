@@ -40,7 +40,6 @@ export default function BlogPage() {
                 <p className="blog-card-category">{post.category}</p>
                 <h3 className="blog-card-title">{post.title}</h3>
                 <p className="blog-card-excerpt">{post.excerpt}</p>
-                <p className="blog-card-date">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
               </Link>
             ))}
           </div>

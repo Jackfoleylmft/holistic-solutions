@@ -82,9 +82,6 @@ export default function BlogPostPage({ params }) {
         <h1>{post.title}</h1>
         <div className="article-byline">
           {post.author && <span className="article-author">{post.author}</span>}
-          <span className="article-date">
-            {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </span>
         </div>
       </section>
 
