@@ -3,16 +3,18 @@ import { processSteps } from '@/lib/content'
 export default function Process() {
   return (
     <section id="process">
-      <p className="section-label">How It Works</p>
-      <h2>
-        Simple, structured,
-        <br />
-        and client-centered.
-      </h2>
+      <div data-animate>
+        <p className="section-label">How It Works</p>
+        <h2>
+          Simple, structured,
+          <br />
+          and client-centered.
+        </h2>
+      </div>
       <div className="process-layout">
         <div className="process-steps">
-          {processSteps.map((s) => (
-            <div key={s.num} className="step">
+          {processSteps.map((s, i) => (
+            <div key={s.num} className="step" data-animate data-delay={i + 1}>
               <span className="step-num">{s.num}</span>
               <div className="step-content">
                 <h4>{s.title}</h4>
@@ -22,14 +24,14 @@ export default function Process() {
           ))}
         </div>
         <div>
-          <div className="process-callout">
+          <div className="process-callout" data-animate data-delay="2">
             <blockquote>
               "Case management is not a one-size-fits-all service. Every person who walks through
               our door gets a plan built around their life."
             </blockquote>
             <cite>— Holistic Solutions Clinical Team</cite>
           </div>
-          <div className="who-list">
+          <div className="who-list" data-animate data-delay="3">
             <h4>We Work With</h4>
             <ul>
               <li>Individuals seeking support for themselves</li>

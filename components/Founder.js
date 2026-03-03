@@ -3,14 +3,16 @@ import Image from 'next/image'
 export default function Founder() {
   return (
     <section id="founder">
-      <p className="section-label">A Note From Our Founder</p>
-      <h2>
-        This work is personal.
-        <br />
-        <em>By design.</em>
-      </h2>
+      <div data-animate>
+        <p className="section-label">A Note From Our Founder</p>
+        <h2>
+          This work is personal.
+          <br />
+          <em>By design.</em>
+        </h2>
+      </div>
       <div className="founder-layout">
-        <div className="founder-identity">
+        <div className="founder-identity" data-animate data-delay="1">
           <div className="founder-avatar">
             <Image
               src="/jack-foley.jpg"
@@ -26,7 +28,7 @@ export default function Founder() {
           <span className="founder-credential">M.S. Clinical Psychology</span>
           <span className="founder-credential">B.S. Psychology</span>
         </div>
-        <div className="founder-message">
+        <div className="founder-message" data-animate data-delay="2">
           <p className="opening">
             "Eleven years ago, I was on the other side of this. I know what it feels like to need
             help, to finally accept it, and to have the right care change everything."

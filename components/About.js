@@ -3,14 +3,16 @@ import { credentials } from '@/lib/content'
 export default function About() {
   return (
     <section id="about">
-      <p className="section-label">About Us</p>
-      <h1>
-        Experienced. Credentialed.
-        <br />
-        Serving Clients Nationwide.
-      </h1>
+      <div data-animate>
+        <p className="section-label">About Us</p>
+        <h1>
+          Experienced. Credentialed.
+          <br />
+          Serving Clients Nationwide.
+        </h1>
+      </div>
       <div className="about-grid">
-        <div className="about-text">
+        <div className="about-text" data-animate data-delay="1">
           <p>
             Holistic Solutions was founded on a simple belief: that every person deserves access to
             knowledgeable, compassionate support on their path to recovery — regardless of how
@@ -31,7 +33,7 @@ export default function About() {
             referrals.
           </p>
         </div>
-        <div className="credentials">
+        <div className="credentials" data-animate data-delay="2">
           {credentials.map((c) => (
             <div key={c.title} className="credential">
               <h4>{c.title}</h4>

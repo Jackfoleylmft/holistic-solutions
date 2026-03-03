@@ -256,8 +256,21 @@ h2 {
   background: var(--sand);
   padding: 2.5rem 2rem;
   transition: background 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--clay);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 .service-card:hover { background: var(--white); }
+.service-card:hover::after { transform: scaleX(1); }
 .service-num {
   font-family: var(--serif);
   font-size: 1.8rem;
@@ -381,9 +394,12 @@ h2 {
 .credential {
   padding: 1.25rem 1.5rem;
   background: var(--sand);
-  transition: background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
-.credential:hover { background: var(--white); }
+.credential:hover {
+  background: var(--white);
+  box-shadow: inset 3px 0 0 var(--clay);
+}
 .credential h4 {
   font-size: 0.85rem;
   font-weight: 500;
@@ -571,8 +587,21 @@ footer a:hover { color: var(--clay); }
   background: var(--white);
   padding: 2rem 1.75rem;
   transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.serve-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--clay);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 .serve-card:hover { background: var(--sand); }
+.serve-card:hover::after { transform: scaleX(1); }
 .serve-card h3 {
   font-family: var(--serif);
   font-size: 1.15rem;
@@ -602,6 +631,12 @@ footer a:hover { color: var(--clay); }
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  border-color: rgba(196,168,130,0.3);
 }
 .testimonial-text {
   font-family: var(--serif);
@@ -632,6 +667,30 @@ footer a:hover { color: var(--clay); }
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SCROLL-TRIGGERED ANIMATIONS ── */
+.animate-ready [data-animate] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.animate-ready [data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-delay="1"] { transition-delay: 0.08s; }
+[data-delay="2"] { transition-delay: 0.16s; }
+[data-delay="3"] { transition-delay: 0.24s; }
+[data-delay="4"] { transition-delay: 0.32s; }
+[data-delay="5"] { transition-delay: 0.40s; }
+[data-delay="6"] { transition-delay: 0.48s; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-ready [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }
 
 /* ── HAMBURGER ── */
@@ -1182,8 +1241,21 @@ footer a:hover { color: var(--clay); }
   flex-direction: column;
   gap: 0.75rem;
   transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.blog-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--clay);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
 }
 .blog-card:hover { background: var(--sand); }
+.blog-card:hover::after { transform: scaleX(1); }
 .blog-card-category {
   font-size: 0.68rem;
   letter-spacing: 0.2em;

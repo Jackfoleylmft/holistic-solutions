@@ -4,6 +4,7 @@ import CrisisBar from '@/components/CrisisBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
+import AnimationObserver from '@/components/AnimationObserver'
 import { PHONE_HREF, EMAIL, SITE_URL } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
@@ -120,6 +121,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <CrisisBar />
         <FloatingCTA />
+        <AnimationObserver />
       </body>
     </html>
   )
