@@ -16,7 +16,7 @@ export default function Founder() {
           <div className="founder-avatar">
             <Image
               src="/jack-foley.jpg"
-              alt="Jack Foley, LMFT — Founder of Holistic Solutions"
+              alt="Jack Foley, LMFT, Founder of Holistic Solutions"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center top' }}
               priority
@@ -36,7 +36,7 @@ export default function Founder() {
           <p>
             My recovery didn't happen by accident. It happened because I had access to high-quality
             treatment and the kind of wraparound support that held me together while I figured out
-            how to hold myself together. That experience didn't just change my life — it gave it
+            how to hold myself together. That experience didn't just change my life. It gave it
             direction.
           </p>
           <p>
@@ -49,12 +49,12 @@ export default function Founder() {
             Holistic Solutions exists because I believe everyone deserves what I was fortunate enough
             to receive. Not a referral to a website. Not a phone number to call alone at 2am. A real
             person who understands this world, knows the players, and will advocate for you like your
-            life depends on it — because sometimes it does.
+            life depends on it. Because sometimes it does.
           </p>
           <p>
             I work with a broad range of clinical presentations, but substance use disorders and
             psychosis are where my roots run deepest. These are the cases I was trained in, the cases
-            that shaped my clinical instincts, and the cases I am most equipped to navigate —
+            that shaped my clinical instincts, and the cases I am most equipped to navigate,
             including when they show up together, which they often do.
           </p>
           <p>

@@ -31,7 +31,7 @@ export default function TermsPage() {
           <p>Clinical case management services provided by Holistic Solutions are governed by separate service agreements entered into directly with our clinical team. Those agreements take precedence over anything stated on this website.</p>
 
           <h2>Intellectual Property</h2>
-          <p>All content on this website — including text, graphics, logos, and the overall design — is the property of Holistic Solutions LLC and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+          <p>All content on this website, including text, graphics, logos, and the overall design, is the property of Holistic Solutions LLC and is protected by applicable copyright and intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
 
           <h2>Third-Party Links</h2>
           <p>This website may contain links to third-party websites. These links are provided for convenience only. Holistic Solutions has no control over the content of those sites and accepts no responsibility for them.</p>

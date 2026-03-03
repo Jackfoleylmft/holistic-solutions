@@ -15,7 +15,7 @@ export default function BlogPage() {
         <h1>Clinical insights & <em>recovery resources.</em></h1>
         <p className="page-sub">
           Guidance from our clinical team on navigating substance use, mental health, and the
-          behavioral health system — written for individuals, families, and providers.
+          behavioral health system, written for individuals, families, and providers.
         </p>
       </section>
 
@@ -26,7 +26,7 @@ export default function BlogPage() {
             <h2>Articles are on the way.</h2>
             <p className="section-intro" style={{ marginTop: '1rem' }}>
               We&apos;re preparing in-depth guides on case management, intervention, treatment
-              placement, and recovery. Check back soon — or reach out directly if you have a
+              placement, and recovery. Check back soon, or reach out directly if you have a
               question we can help with now.
             </p>
             <div style={{ marginTop: '2rem' }}>

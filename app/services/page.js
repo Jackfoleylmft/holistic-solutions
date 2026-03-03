@@ -15,7 +15,7 @@ export default function ServicesPage() {
       <PageHeader
         label="What We Do"
         title="Comprehensive care for <em>complex needs.</em>"
-        subtitle="We work alongside individuals, families, and providers across the country to build coordinated care plans that address the full picture — clinical, social, and personal."
+        subtitle="We work alongside individuals, families, and providers across the country to build coordinated care plans that address the full picture: clinical, social, and personal."
       />
       <section style={{ borderTop: 'none', paddingTop: '0' }}>
         <div className="services-grid">

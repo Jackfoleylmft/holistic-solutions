@@ -15,12 +15,12 @@ export default function About() {
         <div className="about-text" data-animate data-delay="1">
           <p>
             Holistic Solutions was founded on a simple belief: that every person deserves access to
-            knowledgeable, compassionate support on their path to recovery — regardless of how
+            knowledgeable, compassionate support on their path to recovery, regardless of how
             complicated that path may be or where in the country they live.
           </p>
           <p>
             Our team of licensed clinicians and certified case managers brings extensive experience
-            across the full spectrum of behavioral health — but substance use disorders and psychosis
+            across the full spectrum of behavioral health. Substance use disorders and psychosis
             are where we built our foundation. These are the cases that shaped our clinical approach,
             and they remain the areas where our expertise runs deepest. That said, we work with a
             broad range of struggles, and every client gets the same level of rigorous, individualized
@@ -28,7 +28,7 @@ export default function About() {
           </p>
           <p>
             Headquartered in Los Angeles, CA, we maintain professional relationships with treatment
-            centers, psychiatrists, therapists, and community resources across the United States —
+            centers, psychiatrists, therapists, and community resources across the United States,
             giving our clients access to a warm, trusted national network, not just a list of
             referrals.
           </p>

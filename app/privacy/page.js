@@ -40,9 +40,9 @@ export default function PrivacyPage() {
           <h2>Third-Party Services</h2>
           <p>Our website uses the following third-party services:</p>
           <ul>
-            <li><strong>Formspree</strong> — processes contact form submissions and routes them securely to our team. Formspree's privacy policy governs their handling of this data.</li>
-            <li><strong>Google Analytics</strong> — provides anonymized website usage statistics. No personally identifiable information is shared with Google Analytics.</li>
-            <li><strong>Vercel</strong> — hosts this website. Vercel may collect standard server logs including IP addresses for security and performance purposes.</li>
+            <li><strong>Formspree</strong> processes contact form submissions and routes them securely to our team. Formspree's privacy policy governs their handling of this data.</li>
+            <li><strong>Google Analytics</strong> provides anonymized website usage statistics. No personally identifiable information is shared with Google Analytics.</li>
+            <li><strong>Vercel</strong> hosts this website. Vercel may collect standard server logs including IP addresses for security and performance purposes.</li>
           </ul>
 
           <h2>Health Information</h2>

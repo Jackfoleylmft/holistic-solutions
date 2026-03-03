@@ -29,7 +29,7 @@ export default function Hero() {
         </h1>
         <p className="hero-sub">
           Holistic Solutions provides individualized case management for substance use, mental
-          health, co-occurring disorders, and intervention services — guiding individuals and
+          health, co-occurring disorders, and intervention services, guiding individuals and
           families across the United States toward lasting recovery. Our roots are in the most
           complex cases: substance use disorders and psychosis are where our clinical depth runs
           deepest.

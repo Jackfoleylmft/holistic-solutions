@@ -17,7 +17,7 @@ export default function NotFound() {
       </section>
       <section style={{ background: 'var(--white)', textAlign: 'center' }}>
         <p className="section-intro" style={{ marginBottom: '2rem' }}>
-          You can find everything you need from the links below, or reach out directly — we&apos;re
+          You can find everything you need from the links below, or reach out directly. We&apos;re
           easy to get a hold of.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>

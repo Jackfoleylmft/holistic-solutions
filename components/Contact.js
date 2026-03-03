@@ -37,8 +37,7 @@ export default function Contact() {
       <p className="section-label">Get Started</p>
       <h2>Reach out. We&apos;ll take it from here.</h2>
       <p className="section-intro">
-        All inquiries are confidential. A member of our team will respond within one business day —
-        wherever you are in the US.
+        All inquiries are confidential. A member of our team will respond within one business day, wherever you are in the US.
       </p>
       <div className="contact-layout">
         <div className="contact-info">
@@ -115,7 +114,7 @@ export default function Contact() {
                 <option>Recovery Coaching</option>
                 <option>Companionship &amp; Support Services</option>
                 <option>Safe &amp; Clinical Transport</option>
-                <option>Not sure — need guidance</option>
+                <option>Not sure, need guidance</option>
               </select>
             </div>
             <div className="field">

@@ -11,7 +11,7 @@ export default function ServicesPreview() {
         </div>
         <p className="section-intro" data-animate data-delay="1">
           We work alongside individuals, families, and providers across the country to build
-          coordinated care plans that address the full picture — clinical, social, and personal.
+          coordinated care plans that address the full picture: clinical, social, and personal.
         </p>
       </div>
       <div className="services-grid">
