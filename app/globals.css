@@ -1297,6 +1297,15 @@ footer a:hover { color: var(--clay); }
   .article-hero { height: 260px; }
 }
 
+/* ── CONTACT MAP ── */
+.contact-map {
+  margin-top: 3rem;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  opacity: 0.9;
+}
+
 /* ── GRAIN TEXTURE OVERLAY ── */
 body::after {
   content: '';
