@@ -91,7 +91,8 @@ const schemaOrg = {
   },
   sameAs: [
     'https://www.linkedin.com/in/jack-foley-m-a-lmft-25a462133/',
-    // Add Psychology Today, CAMFT, AAMFT, GBP profile URLs as they go live
+    'https://www.therapyden.com/therapist/jack-foley',
+    // Add Psychology Today, CAMFT, AAMFT profile URLs as they go live
   ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
