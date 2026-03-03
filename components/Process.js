@@ -3,9 +3,9 @@ import { processSteps } from '@/lib/content'
 export default function Process() {
   return (
     <section id="process">
-      <div data-animate>
-        <p className="section-label">How It Works</p>
-        <h2>
+      <div>
+        <p className="section-label" data-animate>How It Works</p>
+        <h2 data-split>
           Simple, structured,
           <br />
           and client-centered.

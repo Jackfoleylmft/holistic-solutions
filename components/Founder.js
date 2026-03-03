@@ -3,9 +3,9 @@ import Image from 'next/image'
 export default function Founder() {
   return (
     <section id="founder">
-      <div data-animate>
-        <p className="section-label">A Note From Our Founder</p>
-        <h2>
+      <div>
+        <p className="section-label" data-animate>A Note From Our Founder</p>
+        <h2 data-split>
           This work is personal.
           <br />
           <em>By design.</em>

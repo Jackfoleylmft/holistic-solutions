@@ -79,7 +79,7 @@ export default function HipaaPage() {
           <p>For questions about this notice or to exercise any of your rights, please contact us:</p>
           <ul>
             <li><strong>Privacy Officer:</strong> Jack Foley, LMFT</li>
-            <li><strong>Email:</strong> info@holisticsolutions.com</li>
+            <li><strong>Email:</strong> info@hscasemanagement.com</li>
             <li><strong>Phone:</strong> (702) 494-7641</li>
             <li><strong>Address:</strong> Los Angeles, CA</li>
           </ul>

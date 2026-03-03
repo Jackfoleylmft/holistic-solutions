@@ -21,9 +21,11 @@ export function generateMetadata({ params }) {
       type: 'article',
       publishedTime: post.date,
       authors: ['Jack Foley, LMFT'],
-      ...(post.image && {
-        images: [{ url: post.image, width: 1200, height: 500, alt: post.imageAlt || post.title }],
-      }),
+      images: [
+        post.image
+          ? { url: post.image, width: 1200, height: 500, alt: post.imageAlt || post.title }
+          : { url: '/opengraph-image', width: 1200, height: 630, alt: post.title },
+      ],
     },
   }
 }

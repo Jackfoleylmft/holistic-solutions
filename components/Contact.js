@@ -111,6 +111,10 @@ export default function Contact() {
                 <option>Mental Health Case Management</option>
                 <option>Co-Occurring Disorders</option>
                 <option>Intervention Services</option>
+                <option>Treatment Placement</option>
+                <option>Recovery Coaching</option>
+                <option>Companionship &amp; Support Services</option>
+                <option>Safe &amp; Clinical Transport</option>
                 <option>Not sure — need guidance</option>
               </select>
             </div>

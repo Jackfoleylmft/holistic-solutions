@@ -58,6 +58,7 @@ export const metadata = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': ['MedicalBusiness', 'ProfessionalService'],
+  '@id': SITE_URL,
   name: BUSINESS_NAME,
   description:
     'Nationwide clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, California.',
@@ -85,8 +86,14 @@ const schemaOrg = {
   openingHours: 'Mo-Fr 08:00-18:00',
   founder: {
     '@type': 'Person',
+    '@id': `${SITE_URL}/about`,
     name: 'Jack Foley',
     jobTitle: 'Founder and Clinical Director',
+    url: `${SITE_URL}/about`,
+    sameAs: [
+      'https://www.linkedin.com/in/jack-foley-m-a-lmft-25a462133/',
+      'https://www.therapyden.com/therapist/jack-foley',
+    ],
     hasCredential: ['LMFT', 'M.S. Clinical Psychology', 'B.S. Psychology'],
   },
   sameAs: [

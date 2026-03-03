@@ -3,9 +3,9 @@ import { credentials } from '@/lib/content'
 export default function About() {
   return (
     <section id="about">
-      <div data-animate>
-        <p className="section-label">About Us</p>
-        <h1>
+      <div>
+        <p className="section-label" data-animate>About Us</p>
+        <h1 data-split>
           Experienced. Credentialed.
           <br />
           Serving Clients Nationwide.

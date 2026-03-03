@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { services, getServiceBySlug } from '@/lib/services'
 import { posts } from '@/lib/posts'
-import { SITE_URL, BUSINESS_NAME } from '@/lib/constants'
+import { SITE_URL, BUSINESS_NAME, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 import HomeCTA from '@/components/HomeCTA'
 
 export function generateStaticParams() {
@@ -115,8 +115,8 @@ export default function ServicePage({ params }) {
               <Link href="/contact" className="btn btn-primary" style={{ display: 'block', textAlign: 'center', marginBottom: '0.75rem' }}>
                 Get Started
               </Link>
-              <a href="tel:+17024947641" style={{ display: 'block', textAlign: 'center', fontSize: '0.82rem', color: 'var(--clay)', textDecoration: 'none', letterSpacing: '0.04em' }}>
-                (702) 494-7641
+              <a href={PHONE_HREF} style={{ display: 'block', textAlign: 'center', fontSize: '0.82rem', color: 'var(--clay)', textDecoration: 'none', letterSpacing: '0.04em' }}>
+                {PHONE_DISPLAY}
               </a>
             </div>
           </div>

@@ -3,9 +3,9 @@ import { whoWeServeCards } from '@/lib/content'
 export default function WhoWeServe() {
   return (
     <section id="who-we-serve" style={{ background: 'var(--white)' }}>
-      <div data-animate>
-        <p className="section-label">Who We Serve</p>
-        <h2>
+      <div>
+        <p className="section-label" data-animate>Who We Serve</p>
+        <h2 data-split>
           Built for families, individuals,
           <br />
           and the providers who support them.

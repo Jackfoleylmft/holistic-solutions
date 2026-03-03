@@ -63,7 +63,7 @@ export default function PrivacyPage() {
           <h2>Contact Us</h2>
           <p>If you have questions about this Privacy Policy, please contact us:</p>
           <ul>
-            <li>Email: info@holisticsolutions.com</li>
+            <li>Email: info@hscasemanagement.com</li>
             <li>Phone: (702) 494-7641</li>
             <li>Address: Los Angeles, CA</li>
           </ul>

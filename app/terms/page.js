@@ -51,7 +51,7 @@ export default function TermsPage() {
           <h2>Contact Us</h2>
           <p>If you have questions about these Terms of Service, please contact us:</p>
           <ul>
-            <li>Email: info@holisticsolutions.com</li>
+            <li>Email: info@hscasemanagement.com</li>
             <li>Phone: (702) 494-7641</li>
             <li>Address: Los Angeles, CA</li>
           </ul>
