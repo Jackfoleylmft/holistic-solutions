@@ -145,7 +145,7 @@ export default function Contact() {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d352379.1812110411!2d-118.5133959955283!3d33.94189274756131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x850bfd59280805b9%3A0x88a2d4c503520b35!2sHolistic%20Solutions%20Case%20Management!5e0!3m2!1sen!2sus!4v1772519895660!5m2!1sen!2sus"
           width="100%"
-          height="320"
+          height="200"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
