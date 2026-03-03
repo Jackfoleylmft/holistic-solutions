@@ -1,6 +1,8 @@
 export const metadata = {
   title: 'Privacy Policy | Holistic Solutions LLC',
   description: 'Privacy Policy for Holistic Solutions LLC. Learn how we collect, use, and protect your information.',
+  alternates: { canonical: 'https://hscasemanagement.com/privacy' },
+  robots: 'noindex, follow',
 }
 
 export default function PrivacyPage() {

@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const links = [
   { href: '/services', label: 'Services' },
@@ -12,12 +13,27 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const pathname = usePathname()
 
-  function close() { setOpen(false) }
+  const close = useCallback(() => setOpen(false), [])
+
+  // Close on route change
+  useEffect(() => {
+    close()
+  }, [pathname, close])
+
+  // Close on Escape key
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.key === 'Escape' && open) close()
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open, close])
 
   return (
     <>
-      <nav>
+      <nav aria-label="Main navigation">
         <Link href="/" className="logo">
           Holistic <span>Solutions</span>
         </Link>
@@ -30,7 +46,9 @@ export default function Nav() {
         <button
           className={`hamburger${open ? ' open' : ''}`}
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           <span />
           <span />
@@ -38,7 +56,12 @@ export default function Nav() {
         </button>
       </nav>
 
-      <div className={`mobile-menu${open ? ' open' : ''}`}>
+      <div
+        id="mobile-menu"
+        className={`mobile-menu${open ? ' open' : ''}`}
+        aria-label="Mobile navigation"
+        aria-hidden={!open}
+      >
         {links.map((l) => (
           <Link key={l.href} href={l.href} onClick={close}>{l.label}</Link>
         ))}

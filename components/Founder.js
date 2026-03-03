@@ -13,7 +13,7 @@ export default function Founder() {
         <div className="founder-identity">
           <div className="founder-avatar">
             <Image
-              src="/jack-foley.png"
+              src="/jack-foley.jpg"
               alt="Jack Foley, LMFT — Founder of Holistic Solutions"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center top' }}

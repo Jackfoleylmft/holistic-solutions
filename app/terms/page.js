@@ -1,6 +1,8 @@
 export const metadata = {
   title: 'Terms of Service | Holistic Solutions LLC',
   description: 'Terms of Service for Holistic Solutions LLC and the hscasemanagement.com website.',
+  alternates: { canonical: 'https://hscasemanagement.com/terms' },
+  robots: 'noindex, follow',
 }
 
 export default function TermsPage() {

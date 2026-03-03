@@ -1,35 +1,14 @@
-const credentials = [
-  {
-    title: 'Licensed Clinical Case Managers',
-    body: 'All case managers hold current licensure in social work, counseling, or a related clinical field. We work with licensed providers in every state we serve.',
-  },
-  {
-    title: 'Masters-Level Clinicians Leading Every Intervention',
-    body: 'Our interventions are facilitated by licensed, masters-level clinicians — not just certified interventionists. That clinical foundation means we can assess what\'s actually happening in the room, respond to psychiatric complexity in real time, and navigate crisis with the training to back it up.',
-  },
-  {
-    title: 'Confidential & HIPAA Compliant',
-    body: 'All services are provided with strict confidentiality in accordance with HIPAA and applicable state regulations wherever you are located.',
-  },
-  {
-    title: 'Deep Expertise in Substance Use & Psychosis',
-    body: 'These are the conditions we built our practice on. Complex, often misunderstood, and frequently undertreated — we know this clinical terrain better than most.',
-  },
-  {
-    title: 'Whole-Person Philosophy',
-    body: 'We address clinical, social, environmental, and relational factors — not just a diagnosis. Holistic by name, holistic by practice.',
-  },
-]
+import { credentials } from '@/lib/content'
 
 export default function About() {
   return (
     <section id="about">
       <p className="section-label">About Us</p>
-      <h2>
+      <h1>
         Experienced. Credentialed.
         <br />
         Serving Clients Nationwide.
-      </h2>
+      </h1>
       <div className="about-grid">
         <div className="about-text">
           <p>

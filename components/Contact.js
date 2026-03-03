@@ -1,16 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { PHONE_DISPLAY, PHONE_HREF, EMAIL } from '@/lib/constants'
 
-// ─────────────────────────────────────────────────────────────
-// FORMSPREE SETUP:
-// 1. Go to https://formspree.io and sign up (free)
-// 2. Click "New Form" → name it "Holistic Solutions Contact"
-// 3. Add Jack@bodhicasa.com as the notification email
-// 4. Copy the form ID from the endpoint URL (e.g. "xabcdefg")
-// 5. Replace YOUR_FORM_ID below with that ID
-// ─────────────────────────────────────────────────────────────
-const FORMSPREE_ID = 'xreavvjn'
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xreavvjn'
 
 export default function Contact() {
   const [status, setStatus] = useState('idle') // idle | submitting | success | error
@@ -51,49 +44,34 @@ export default function Contact() {
         <div className="contact-info">
           <div className="contact-item">
             <h4>Phone</h4>
-            <p>
-              <a href="tel:+17024947641">(702) 494-7641</a>
-            </p>
+            <p><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></p>
           </div>
           <div className="contact-item">
             <h4>Email</h4>
-            <p>
-              <a href="mailto:info@holisticsolutions.com">info@holisticsolutions.com</a>
-            </p>
+            <p><a href={`mailto:${EMAIL}`}>{EMAIL}</a></p>
           </div>
           <div className="contact-item">
             <h4>Service Area</h4>
-            <p>
-              Nationwide · Headquartered in
-              <br />
-              Los Angeles, CA
-            </p>
+            <p>Nationwide · Headquartered in<br />Los Angeles, CA</p>
           </div>
           <div className="contact-item">
             <h4>Hours</h4>
-            <p>
-              Monday – Friday, 8am – 6pm
-              <br />
-              Urgent consultations by appointment
-            </p>
+            <p>Monday – Friday, 8am – 6pm<br />Urgent consultations by appointment</p>
           </div>
           <div className="contact-item">
             <h4>Crisis Line</h4>
-            <p>
-              Call or text <strong style={{ color: 'var(--clay)' }}>988</strong> for immediate
-              crisis support
-            </p>
+            <p>Call or text <strong style={{ color: 'var(--clay)' }}>988</strong> for immediate crisis support</p>
           </div>
         </div>
 
         {status === 'success' ? (
-          <div className="form-success">
+          <div className="form-success" role="status">
             <strong>Message received.</strong> Thank you for reaching out. A member of our team
-            will be in touch within one business day. If this is urgent, please call us directly at
-            (702) 494-7641.
+            will be in touch within one business day. If this is urgent, please call us directly
+            at <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>.
           </div>
         ) : (
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} aria-busy={status === 'submitting'} noValidate>
             <div className="form-row">
               <div className="field">
                 <label htmlFor="fname">First Name</label>
@@ -107,25 +85,17 @@ export default function Contact() {
             <div className="form-row">
               <div className="field">
                 <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="jane@email.com"
-                  required
-                />
+                <input type="email" id="email" name="email" placeholder="jane@email.com" required />
               </div>
               <div className="field">
                 <label htmlFor="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" inputMode="tel" />
               </div>
             </div>
             <div className="field">
               <label htmlFor="inquiry">Nature of Inquiry</label>
-              <select id="inquiry" name="inquiry">
-                <option value="" disabled defaultValue="">
-                  Select one
-                </option>
+              <select id="inquiry" name="inquiry" defaultValue="">
+                <option value="" disabled>Select one</option>
                 <option>I am seeking support for myself</option>
                 <option>I am a family member seeking help for a loved one</option>
                 <option>I am a healthcare / referral provider</option>
@@ -135,10 +105,8 @@ export default function Contact() {
             </div>
             <div className="field">
               <label htmlFor="service">Service of Interest</label>
-              <select id="service" name="service">
-                <option value="" disabled defaultValue="">
-                  Select one
-                </option>
+              <select id="service" name="service" defaultValue="">
+                <option value="" disabled>Select one</option>
                 <option>Substance Use Case Management</option>
                 <option>Mental Health Case Management</option>
                 <option>Co-Occurring Disorders</option>
@@ -152,11 +120,13 @@ export default function Contact() {
                 id="message"
                 name="message"
                 placeholder="Share any additional context. This helps us prepare for your consultation."
+                maxLength={1000}
               />
             </div>
             {status === 'error' && (
-              <p className="form-error">
-                Something went wrong. Please try again or call us at (702) 494-7641.
+              <p className="form-error" role="alert" aria-live="polite">
+                Something went wrong. Please try again or call us at{' '}
+                <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>.
               </p>
             )}
             <button type="submit" className="submit-btn" disabled={status === 'submitting'}>

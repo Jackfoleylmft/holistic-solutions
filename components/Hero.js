@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants'
+
 export default function Hero() {
   return (
     <section className="hero" id="home">
@@ -18,11 +21,11 @@ export default function Hero() {
           deepest.
         </p>
         <div className="hero-actions">
-          <a href="#contact" className="btn btn-primary">
+          <Link href="/contact" className="btn btn-primary">
             Request a Consultation
-          </a>
-          <a href="#services" className="btn btn-secondary">
-            Our Services
+          </Link>
+          <a href={PHONE_HREF} className="btn btn-secondary">
+            {PHONE_DISPLAY}
           </a>
         </div>
       </div>

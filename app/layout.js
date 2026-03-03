@@ -4,6 +4,7 @@ import CrisisBar from '@/components/CrisisBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
+import { PHONE_HREF, EMAIL, SITE_URL } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -21,10 +22,10 @@ const jost = Jost({
 })
 
 export const metadata = {
-  metadataBase: new URL('https://hscasemanagement.com'),
-  title: 'Holistic Solutions Case Management | Clinical Case Management – Nationwide',
+  metadataBase: new URL(SITE_URL),
+  title: 'Clinical Case Management — Nationwide | Holistic Solutions',
   description:
-    'Holistic Solutions Case Management provides clinical case management for substance use, mental health, co-occurring disorders, and intervention services across the United States. Headquartered in Los Angeles, CA.',
+    'Masters-level clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, CA — serving individuals and families across the United States.',
   keywords:
     'clinical case management, substance use case manager, mental health case management, co-occurring disorders, clinical intervention services, masters level interventionist, licensed clinician intervention, treatment placement, recovery coaching, companionship services, sober coaching, safe clinical transport, behavioral health case management, nationwide case management, substance abuse help, addiction case manager',
   authors: [{ name: 'Holistic Solutions LLC' }],
@@ -36,18 +37,20 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Holistic Solutions Case Management | Clinical Case Management – Nationwide',
+    title: 'Clinical Case Management — Nationwide | Holistic Solutions',
     description:
-      'Individualized case management for substance use, mental health, co-occurring disorders, and intervention services. Serving clients across the United States.',
+      'Masters-level clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, CA — serving individuals and families across the United States.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://hscasemanagement.com',
+    url: SITE_URL,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Clinical Case Management — Nationwide | Holistic Solutions' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Holistic Solutions Case Management | Clinical Case Management – Nationwide',
+    title: 'Clinical Case Management — Nationwide | Holistic Solutions',
     description:
-      'Individualized case management for substance use, mental health, co-occurring disorders, and intervention services. Serving clients across the United States.',
+      'Masters-level clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, CA — serving individuals and families across the United States.',
+    images: ['/opengraph-image'],
   },
 }
 
@@ -57,9 +60,9 @@ const schemaOrg = {
   name: 'Holistic Solutions Case Management',
   description:
     'Nationwide clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, California.',
-  url: 'https://hscasemanagement.com',
+  url: SITE_URL,
   telephone: '+17024947641',
-  email: 'info@holisticsolutions.com',
+  email: EMAIL,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Los Angeles',
@@ -86,53 +89,6 @@ const schemaOrg = {
   },
 }
 
-const schemaFaq = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What is clinical case management?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Clinical case management is a collaborative process in which a licensed professional works with an individual to assess their needs, create a care plan, coordinate services, and monitor progress over time. It bridges the gap between a person and the clinical and community resources they need.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Who is case management for?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Case management is for individuals navigating substance use, mental health challenges, or both — as well as their families. It is especially helpful when the healthcare system feels overwhelming, when past treatment has not worked, or when multiple needs require coordination.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does Holistic Solutions offer services nationwide?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. Holistic Solutions provides clinical case management and intervention services to clients across the United States. We are headquartered in Los Angeles, CA and work with individuals and families nationally via telehealth and on-site coordination.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is the difference between case management and therapy?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Therapy focuses on the therapeutic relationship and emotional processing. Case management focuses on coordination, navigation, and logistics — connecting you to the right providers, managing your care plan, and removing barriers to treatment. Both are often used together.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How quickly can we get started with Holistic Solutions?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'We respond to all inquiries within one business day and can often schedule an initial consultation within 48 hours. For urgent situations, please call us directly at (702) 494-7641.',
-      },
-    },
-  ],
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
@@ -156,14 +112,11 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaFaq) }}
-        />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Nav />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <CrisisBar />
         <FloatingCTA />

@@ -26,6 +26,22 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* ── SKIP LINK ── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--dusk);
+  color: var(--sand);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  z-index: 9999;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus { top: 0; }
+
 /* ── CRISIS BAR ── */
 .crisis-bar {
   background: var(--dusk);
@@ -184,6 +200,16 @@ h1 em {
   border: 1px solid var(--border);
 }
 .btn-secondary:hover { border-color: var(--adobe); color: var(--adobe); }
+
+/* ── H1 OVERRIDES FOR INTERIOR SECTIONS ── */
+#about h1, #faq h1 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.18;
+  opacity: 1;
+  animation: none;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
 
 /* ── SHARED ── */
 section { padding: 100px 5vw; border-top: 1px solid var(--border); }
@@ -1186,8 +1212,34 @@ footer a:hover { color: var(--clay); }
   font-weight: 300;
 }
 
-/* ── CITY PAGES ── */
-.city-local { max-width: 680px; }
+/* ── HOME CTA SECTION ── */
+.home-cta-section {
+  background: var(--dusk);
+  color: var(--sand);
+}
+.home-cta-label { color: var(--clay); }
+.home-cta-heading { color: var(--white); }
+.home-cta-intro { color: #C8BEB4; margin-bottom: 2.5rem; }
+.home-cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.home-cta-phone { border-color: rgba(255,255,255,0.2); color: var(--sand); }
+
+/* ── SERVICE CARD LINK ── */
+.service-link { text-decoration: none; color: inherit; display: block; height: 100%; }
+.service-link .service-card { height: 100%; }
+
+/* ── SERVICES PREVIEW MORE LINK ── */
+.services-preview-more { margin-top: 2rem; text-align: center; }
+
+/* ── ARTICLE HERO IMAGE ── */
+.article-hero {
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  background: var(--dusk);
+}
+@media (max-width: 768px) {
+  .article-hero { height: 260px; }
+}
 
 /* ── GRAIN TEXTURE OVERLAY ── */
 body::after {

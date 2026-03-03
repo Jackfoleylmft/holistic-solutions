@@ -1,25 +1,4 @@
-const steps = [
-  {
-    num: '01',
-    title: 'Initial Contact',
-    body: 'Reach out via phone or our intake form. A case manager will respond within 24 hours to schedule a free consultation.',
-  },
-  {
-    num: '02',
-    title: 'Comprehensive Assessment',
-    body: 'We conduct a thorough biopsychosocial assessment to understand clinical needs, history, strengths, and goals.',
-  },
-  {
-    num: '03',
-    title: 'Care Plan Development',
-    body: 'A personalized, goal-oriented care plan is built collaboratively with the client and, when appropriate, their family or support network.',
-  },
-  {
-    num: '04',
-    title: 'Ongoing Coordination & Support',
-    body: 'We actively coordinate with treatment providers, monitor progress, address barriers, and adjust the plan as needs evolve.',
-  },
-]
+import { processSteps } from '@/lib/content'
 
 export default function Process() {
   return (
@@ -32,7 +11,7 @@ export default function Process() {
       </h2>
       <div className="process-layout">
         <div className="process-steps">
-          {steps.map((s) => (
+          {processSteps.map((s) => (
             <div key={s.num} className="step">
               <span className="step-num">{s.num}</span>
               <div className="step-content">

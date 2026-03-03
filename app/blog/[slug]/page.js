@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { posts, getPostBySlug } from '@/lib/posts'
+import { services } from '@/lib/services'
 import HomeCTA from '@/components/HomeCTA'
 
 export function generateStaticParams() {
@@ -12,7 +14,16 @@ export function generateMetadata({ params }) {
   if (!post) return {}
   return {
     title: `${post.title} | Holistic Solutions Case Management`,
-    description: post.excerpt,
+    description: post.metaDescription || post.excerpt.substring(0, 155),
+    alternates: { canonical: `https://hscasemanagement.com/blog/${post.slug}` },
+    openGraph: {
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['Jack Foley, LMFT'],
+      ...(post.image && {
+        images: [{ url: post.image, width: 1200, height: 500, alt: post.imageAlt || post.title }],
+      }),
+    },
   }
 }
 
@@ -20,8 +31,49 @@ export default function BlogPostPage({ params }) {
   const post = getPostBySlug(params.slug)
   if (!post) notFound()
 
+  const relatedServiceData = post.relatedServices
+    ? services.filter((s) => post.relatedServices.includes(s.slug))
+    : []
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.metaDescription || post.excerpt.substring(0, 155),
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Jack Foley',
+      jobTitle: 'Licensed Marriage and Family Therapist',
+      url: 'https://hscasemanagement.com/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Holistic Solutions Case Management',
+      url: 'https://hscasemanagement.com',
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://hscasemanagement.com/blog/${post.slug}`,
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://hscasemanagement.com' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://hscasemanagement.com/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://hscasemanagement.com/blog/${post.slug}` },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <section className="page-header">
         <Link href="/blog" className="back-link">← All Articles</Link>
         <p className="section-label" style={{ marginTop: '1.5rem' }}>{post.category}</p>
@@ -33,6 +85,20 @@ export default function BlogPostPage({ params }) {
           </span>
         </div>
       </section>
+
+      {post.image && (
+        <div className="article-hero">
+          <Image
+            src={post.image}
+            alt={post.imageAlt || post.title}
+            width={1200}
+            height={500}
+            sizes="100vw"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            priority
+          />
+        </div>
+      )}
 
       <section className="legal-page">
         <div className="legal-content">
@@ -72,6 +138,24 @@ export default function BlogPostPage({ params }) {
           )}
         </div>
       </section>
+
+      {relatedServiceData.length > 0 && (
+        <section style={{ background: 'var(--white)' }}>
+          <p className="section-label">Related Services</p>
+          <h2>How we can help</h2>
+          <div className="services-grid" style={{ marginTop: '2.5rem' }}>
+            {relatedServiceData.map((s) => (
+              <Link key={s.slug} href={`/services/${s.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="service-card" style={{ height: '100%' }}>
+                  <div className="service-num">{s.num}</div>
+                  <h3>{s.shortTitle}</h3>
+                  <p>{s.tagline}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <HomeCTA />
     </>

@@ -14,6 +14,7 @@ export function generateMetadata({ params }) {
     title: `${service.title} | Holistic Solutions Case Management`,
     description: service.metaDescription,
     keywords: service.keywords,
+    alternates: { canonical: `https://hscasemanagement.com/services/${service.slug}` },
   }
 }
 
@@ -21,8 +22,20 @@ export default function ServicePage({ params }) {
   const service = getServiceBySlug(params.slug)
   if (!service) notFound()
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://hscasemanagement.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://hscasemanagement.com/services' },
+      { '@type': 'ListItem', position: 3, name: service.title, item: `https://hscasemanagement.com/services/${service.slug}` },
+    ],
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       {/* Page header */}
       <section className="page-header">
         <Link href="/services" className="back-link">← All Services</Link>

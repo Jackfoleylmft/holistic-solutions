@@ -5,6 +5,7 @@ import PageHeader from '@/components/PageHeader'
 export const metadata = {
   title: 'Services | Holistic Solutions Case Management',
   description: 'Comprehensive clinical case management services including substance use, mental health, co-occurring disorders, intervention, treatment placement, recovery coaching, and more. Nationwide.',
+  alternates: { canonical: 'https://hscasemanagement.com/services' },
 }
 
 export default function ServicesPage() {
