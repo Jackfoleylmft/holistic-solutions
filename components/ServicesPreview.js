@@ -5,9 +5,9 @@ export default function ServicesPreview() {
   return (
     <section id="services">
       <div className="section-head">
-        <div data-animate>
-          <p className="section-label">What We Do</p>
-          <h2>Comprehensive care for complex needs.</h2>
+        <div>
+          <p className="section-label" data-animate>What We Do</p>
+          <h2 data-split>Comprehensive care for complex needs.</h2>
         </div>
         <p className="section-intro" data-animate data-delay="1">
           We work alongside individuals, families, and providers across the country to build

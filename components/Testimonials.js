@@ -3,11 +3,11 @@ import { testimonials } from '@/lib/content'
 export default function Testimonials() {
   return (
     <section id="testimonials" style={{ background: 'var(--dusk)' }}>
-      <div data-animate>
-        <p className="section-label" style={{ color: 'var(--clay)' }}>
+      <div>
+        <p className="section-label" data-animate style={{ color: 'var(--clay)' }}>
           What Families Say
         </p>
-        <h2 style={{ color: 'var(--white)' }}>
+        <h2 data-split style={{ color: 'var(--white)' }}>
           Recovery is possible. We have seen it happen.
         </h2>
       </div>

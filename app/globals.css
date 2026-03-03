@@ -1304,8 +1304,41 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.055;
+  opacity: 0.048;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 200px 200px;
+  animation: grain 8s steps(1) infinite;
+}
+@keyframes grain {
+  0%   { transform: translate(0, 0) }
+  10%  { transform: translate(-5%, -10%) }
+  20%  { transform: translate(-15%, 5%) }
+  30%  { transform: translate(7%, -25%) }
+  40%  { transform: translate(-5%, 25%) }
+  50%  { transform: translate(-15%, 10%) }
+  60%  { transform: translate(15%, 0) }
+  70%  { transform: translate(0, 15%) }
+  80%  { transform: translate(3%, 35%) }
+  90%  { transform: translate(-20%, 0) }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; }
+}
+
+/* ── WORD SPLIT REVEAL ── */
+.animate-ready [data-split] .word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+}
+.animate-ready [data-split] .word-inner {
+  display: inline-block;
+  transform: translateY(115%);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.animate-ready [data-split].in-view .word-inner {
+  transform: translateY(0);
 }

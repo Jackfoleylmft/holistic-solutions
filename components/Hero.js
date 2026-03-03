@@ -22,7 +22,7 @@ export default function Hero() {
         <span className="hero-label">
           Clinical Case Management · Nationwide · HQ Los Angeles, CA
         </span>
-        <h1>
+        <h1 data-split>
           Integrated care for the
           <br />
           <em>whole person.</em>
