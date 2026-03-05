@@ -1,7 +1,9 @@
+import { SITE_URL } from '@/lib/constants'
+
 export const metadata = {
   title: 'HIPAA Notice of Privacy Practices | Holistic Solutions LLC',
   description: 'HIPAA Notice of Privacy Practices for Holistic Solutions LLC. Learn about your rights and how your health information is used and protected.',
-  alternates: { canonical: 'https://hscasemanagement.com/hipaa' },
+  alternates: { canonical: `${SITE_URL}/hipaa` },
   robots: 'noindex, follow',
 }
 

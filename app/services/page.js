@@ -2,11 +2,12 @@ import Link from 'next/link'
 import { services } from '@/lib/services'
 import PageHeader from '@/components/PageHeader'
 import WhoWeServe from '@/components/WhoWeServe'
+import { SITE_URL } from '@/lib/constants'
 
 export const metadata = {
   title: 'Services | Holistic Solutions Case Management',
   description: 'Comprehensive clinical case management services including substance use, mental health, co-occurring disorders, intervention, treatment placement, recovery coaching, and more. Nationwide.',
-  alternates: { canonical: 'https://hscasemanagement.com/services' },
+  alternates: { canonical: `${SITE_URL}/services` },
 }
 
 export default function ServicesPage() {
@@ -14,9 +15,10 @@ export default function ServicesPage() {
     <>
       <PageHeader
         label="What We Do"
-        title="Comprehensive care for <em>complex needs.</em>"
         subtitle="We work alongside individuals, families, and providers across the country to build coordinated care plans that address the full picture: clinical, social, and personal."
-      />
+      >
+        Comprehensive care for <em>complex needs.</em>
+      </PageHeader>
       <section style={{ borderTop: 'none', paddingTop: '0' }}>
         <div className="services-grid">
           {services.map((s) => (

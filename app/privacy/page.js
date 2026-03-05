@@ -1,7 +1,9 @@
+import { SITE_URL } from '@/lib/constants'
+
 export const metadata = {
   title: 'Privacy Policy | Holistic Solutions LLC',
   description: 'Privacy Policy for Holistic Solutions LLC. Learn how we collect, use, and protect your information.',
-  alternates: { canonical: 'https://hscasemanagement.com/privacy' },
+  alternates: { canonical: `${SITE_URL}/privacy` },
   robots: 'noindex, follow',
 }
 

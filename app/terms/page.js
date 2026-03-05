@@ -1,7 +1,9 @@
+import { SITE_URL } from '@/lib/constants'
+
 export const metadata = {
   title: 'Terms of Service | Holistic Solutions LLC',
   description: 'Terms of Service for Holistic Solutions LLC and the hscasemanagement.com website.',
-  alternates: { canonical: 'https://hscasemanagement.com/terms' },
+  alternates: { canonical: `${SITE_URL}/terms` },
   robots: 'noindex, follow',
 }
 

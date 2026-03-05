@@ -1,9 +1,11 @@
+import { SITE_URL } from '@/lib/constants'
+
 export default function robots() {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://hscasemanagement.com/sitemap.xml',
+    sitemap: `${SITE_URL}/sitemap.xml`,
   }
 }

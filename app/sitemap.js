@@ -1,8 +1,9 @@
 import { services } from '@/lib/services'
 import { posts } from '@/lib/posts'
+import { SITE_URL } from '@/lib/constants'
 
 export default function sitemap() {
-  const base = 'https://hscasemanagement.com'
+  const base = SITE_URL
   const siteLastUpdated = '2026-03-02'
 
   const staticPages = [
