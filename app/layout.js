@@ -26,7 +26,7 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'Clinical Case Management — Nationwide | Holistic Solutions',
   description:
-    'Masters-level clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, CA, serving individuals and families across the United States.',
+    'Clinical case management for substance use, mental health, and co-occurring disorders. Licensed clinicians, nationwide. Call (702) 494-7641.',
   keywords:
     'clinical case management, substance use case manager, mental health case management, co-occurring disorders, clinical intervention services, masters level interventionist, licensed clinician intervention, treatment placement, recovery coaching, companionship services, sober coaching, safe clinical transport, behavioral health case management, nationwide case management, substance abuse help, addiction case manager',
   authors: [{ name: 'Holistic Solutions LLC' }],
@@ -40,7 +40,7 @@ export const metadata = {
   openGraph: {
     title: 'Clinical Case Management — Nationwide | Holistic Solutions',
     description:
-      'Masters-level clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, CA, serving individuals and families across the United States.',
+      'Clinical case management for substance use, mental health, and co-occurring disorders. Licensed clinicians, nationwide. Call (702) 494-7641.',
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
@@ -50,7 +50,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Clinical Case Management — Nationwide | Holistic Solutions',
     description:
-      'Masters-level clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, CA, serving individuals and families across the United States.',
+      'Clinical case management for substance use, mental health, and co-occurring disorders. Licensed clinicians, nationwide. Call (702) 494-7641.',
     images: ['/opengraph-image'],
   },
 }

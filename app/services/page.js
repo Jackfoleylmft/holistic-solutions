@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { services } from '@/lib/services'
 import PageHeader from '@/components/PageHeader'
 import WhoWeServe from '@/components/WhoWeServe'
+import HomeCTA from '@/components/HomeCTA'
 import { SITE_URL } from '@/lib/constants'
 
 export const metadata = {
@@ -36,6 +37,7 @@ export default function ServicesPage() {
         </div>
       </section>
       <WhoWeServe />
+      <HomeCTA />
     </>
   )
 }

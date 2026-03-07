@@ -4,7 +4,7 @@ import { SITE_URL } from '@/lib/constants'
 
 export const metadata = {
   title: 'Blog | Holistic Solutions Case Management',
-  description: 'Clinical insights, recovery resources, and expert guidance from the team at Holistic Solutions Case Management. Topics include substance use, mental health, co-occurring disorders, intervention, and navigating the behavioral health system.',
+  description: 'Clinical insights and recovery resources from Holistic Solutions. Substance use, mental health, co-occurring disorders, intervention, and family guidance.',
   alternates: { canonical: `${SITE_URL}/blog` },
 }
 

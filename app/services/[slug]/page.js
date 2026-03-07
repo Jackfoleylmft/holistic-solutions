@@ -20,7 +20,7 @@ export function generateMetadata({ params }) {
     ? `${SITE_URL}${seoCanonicalOverrides[service.slug]}`
     : `${SITE_URL}/services/${service.slug}`
   return {
-    title: `${service.title} | Holistic Solutions Case Management`,
+    title: `${service.title} | Holistic Solutions`,
     description: service.metaDescription,
     keywords: service.keywords,
     alternates: { canonical },

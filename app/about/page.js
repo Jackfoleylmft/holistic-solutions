@@ -6,7 +6,7 @@ import { SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 export const metadata = {
   title: 'About | Holistic Solutions Case Management — Jack Foley, LMFT',
-  description: 'Learn about Jack Foley, LMFT, founder of Holistic Solutions Case Management. Licensed clinician, behavioral health case manager, and advocate for individuals and families navigating substance use and mental health challenges.',
+  description: 'Jack Foley, LMFT — founder of Holistic Solutions. Licensed clinician in recovery, advocating for individuals and families navigating substance use and mental health.',
   alternates: { canonical: `${SITE_URL}/about` },
 }
 
