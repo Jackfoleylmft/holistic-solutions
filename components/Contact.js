@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { PHONE_DISPLAY, PHONE_HREF, EMAIL, HOURS } from '@/lib/constants'
+import { PHONE_DISPLAY, PHONE_HREF, EMAIL, HOURS, GOOGLE_REVIEW_URL } from '@/lib/constants'
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xreavvjn'
 
@@ -60,6 +60,10 @@ export default function Contact() {
           <div className="contact-item">
             <h4>Crisis Line</h4>
             <p>Call or text <strong style={{ color: 'var(--clay)' }}>988</strong> for immediate crisis support</p>
+          </div>
+          <div className="contact-item">
+            <h4>Leave a Review</h4>
+            <p><a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Review us on Google</a></p>
           </div>
         </div>
 

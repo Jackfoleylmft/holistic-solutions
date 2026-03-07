@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PHONE_DISPLAY, PHONE_HREF, EMAIL } from '@/lib/constants'
+import { PHONE_DISPLAY, PHONE_HREF, EMAIL, GOOGLE_REVIEW_URL } from '@/lib/constants'
 
 export default function Footer() {
   return (
@@ -32,6 +32,7 @@ export default function Footer() {
           <p className="footer-heading" style={{ marginTop: '1rem' }}>Contact</p>
           <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Leave a Google Review</a>
         </div>
       </div>
       <div className="footer-bottom">
