@@ -28,6 +28,10 @@ export default function sitemap() {
     { url: `${base}/psychosis-case-management-new-york-city`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
     { url: `${base}/dual-diagnosis-case-management-los-angeles`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
     { url: `${base}/dual-diagnosis-case-management-new-york-city`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
+    { url: `${base}/alcohol-use-disorder-case-management`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
+    { url: `${base}/opioid-addiction-case-management`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
+    { url: `${base}/schizophrenia-case-management`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
+    { url: `${base}/first-episode-psychosis-case-management`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
   ]
 
   const servicePages = services.map((s) => ({
