@@ -16,6 +16,7 @@ export default function sitemap() {
     { url: `${base}/privacy`, changeFrequency: 'yearly', priority: 0.3, lastModified: '2026-03-01' },
     { url: `${base}/terms`, changeFrequency: 'yearly', priority: 0.3, lastModified: '2026-03-01' },
     { url: `${base}/hipaa`, changeFrequency: 'yearly', priority: 0.3, lastModified: '2026-03-01' },
+    { url: `${base}/substance-use-case-management`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-06' },
   ]
 
   const servicePages = services.map((s) => ({

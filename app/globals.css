@@ -104,6 +104,20 @@ nav a:hover { color: var(--adobe); }
   text-transform: uppercase !important;
 }
 .nav-cta:hover { background: var(--clay-deep) !important; opacity: 1 !important; }
+.nav-phone {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--clay) !important;
+  text-decoration: none !important;
+  opacity: 0.8;
+}
+.nav-phone:hover { opacity: 1; }
+.mobile-phone {
+  font-size: 0.9rem;
+  color: var(--clay);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
 
 /* ── HERO ── */
 .hero {

@@ -9,14 +9,21 @@ export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }))
 }
 
+const seoCanonicalOverrides = {
+  'substance-use': '/substance-use-case-management',
+}
+
 export function generateMetadata({ params }) {
   const service = getServiceBySlug(params.slug)
   if (!service) return {}
+  const canonical = seoCanonicalOverrides[service.slug]
+    ? `${SITE_URL}${seoCanonicalOverrides[service.slug]}`
+    : `${SITE_URL}/services/${service.slug}`
   return {
     title: `${service.title} | Holistic Solutions Case Management`,
     description: service.metaDescription,
     keywords: service.keywords,
-    alternates: { canonical: `${SITE_URL}/services/${service.slug}` },
+    alternates: { canonical },
   }
 }
 

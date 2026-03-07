@@ -185,7 +185,7 @@ export default function SubstanceUseCaseManagement() {
                 Most case management and intervention services are staffed by certified interventionists or coordinators without clinical licensure. At Holistic Solutions, every case manager is a licensed clinician. Every intervention is led by a master&apos;s-level licensed clinician. When psychiatric complexity is part of the picture — and it often is — clinical training is not optional.
               </p>
               <p className="service-page-body">
-                We also carry deep clinical expertise in two areas where most providers are generalists: substance use disorders and psychosis. These conditions frequently co-occur, and the intersection is where navigation gets most complex. For clients navigating both, see our <Link href="/co-occurring-disorders-case-management">co-occurring disorders case management</Link> page. For cases where psychosis is part of the picture, see <Link href="/psychosis-case-management">psychosis case management</Link>.
+                We also carry deep clinical expertise in two areas where most providers are generalists: substance use disorders and psychosis. These conditions frequently co-occur, and the intersection is where navigation gets most complex. For clients navigating both, see our <Link href="/services/co-occurring-disorders">co-occurring disorders case management</Link> page. For cases where psychosis is part of the picture, see <Link href="/services/mental-health">psychosis and mental health case management</Link>.
               </p>
               <p className="service-page-body">
                 All services are HIPAA compliant. All inquiries are confidential.

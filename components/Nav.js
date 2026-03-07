@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 const links = [
   { href: '/services', label: 'Services' },
@@ -41,6 +42,7 @@ export default function Nav() {
           {links.map((l) => (
             <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
           ))}
+          <li><a href={PHONE_HREF} className="nav-phone">{PHONE_DISPLAY}</a></li>
           <li><Link href="/contact" className="nav-cta">Get Started</Link></li>
         </ul>
         <button
@@ -65,6 +67,7 @@ export default function Nav() {
         {links.map((l) => (
           <Link key={l.href} href={l.href} onClick={close}>{l.label}</Link>
         ))}
+        <a href={PHONE_HREF} className="mobile-phone" onClick={close}>{PHONE_DISPLAY}</a>
         <Link href="/contact" className="mobile-cta" onClick={close}>Get Started</Link>
       </div>
     </>
