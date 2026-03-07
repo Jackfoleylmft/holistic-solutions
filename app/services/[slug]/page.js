@@ -13,6 +13,7 @@ const seoCanonicalOverrides = {
   'substance-use': '/substance-use-case-management',
   'mental-health': '/psychosis-case-management',
   'co-occurring-disorders': '/co-occurring-disorders-case-management',
+  'intervention-services': '/clinical-intervention-services',
 }
 
 export function generateMetadata({ params }) {

@@ -19,6 +19,7 @@ export default function sitemap() {
     { url: `${base}/substance-use-case-management`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-06' },
     { url: `${base}/psychosis-case-management`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-06' },
     { url: `${base}/co-occurring-disorders-case-management`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-06' },
+    { url: `${base}/clinical-intervention-services`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-06' },
   ]
 
   const servicePages = services.map((s) => ({
