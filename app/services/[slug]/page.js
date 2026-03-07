@@ -11,6 +11,7 @@ export function generateStaticParams() {
 
 const seoCanonicalOverrides = {
   'substance-use': '/substance-use-case-management',
+  'mental-health': '/psychosis-case-management',
 }
 
 export function generateMetadata({ params }) {
