@@ -12,6 +12,7 @@ export function generateStaticParams() {
 const seoCanonicalOverrides = {
   'substance-use': '/substance-use-case-management',
   'mental-health': '/psychosis-case-management',
+  'co-occurring-disorders': '/co-occurring-disorders-case-management',
 }
 
 export function generateMetadata({ params }) {
