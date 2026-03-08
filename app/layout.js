@@ -5,7 +5,7 @@ import CrisisBar from '@/components/CrisisBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
-import AnimationObserver from '@/components/AnimationObserver'
+import LazyAnimationObserver from '@/components/LazyAnimationObserver'
 import { PHONE_HREF, EMAIL, SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
@@ -124,7 +124,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <head>
-        <link rel="preload" href="/hero-bg.jpg" as="image" fetchPriority="high" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-9N3BJGHJ6C"
           strategy="afterInteractive"
@@ -153,7 +152,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <CrisisBar />
         <FloatingCTA />
-        <AnimationObserver />
+        <LazyAnimationObserver />
       </body>
     </html>
   )
