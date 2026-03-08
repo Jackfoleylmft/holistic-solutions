@@ -5,7 +5,6 @@ import CrisisBar from '@/components/CrisisBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
-import LazyAnimationObserver from '@/components/LazyAnimationObserver'
 import { PHONE_HREF, EMAIL, SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
@@ -152,7 +151,68 @@ export default function RootLayout({ children }) {
         <Footer />
         <CrisisBar />
         <FloatingCTA />
-        <LazyAnimationObserver />
+        <Script id="animations" strategy="lazyOnload">
+          {`
+(function(){
+  function splitText(el){
+    if(el.dataset.splitDone)return;
+    el.dataset.splitDone='true';
+    var wi=0;
+    function proc(n,t){
+      if(n.nodeType===3){
+        n.textContent.split(/(\\s+)/).forEach(function(p){
+          if(!p)return;
+          if(/^\\s+$/.test(p)){t.appendChild(document.createTextNode(p))}
+          else{var w=document.createElement('span');w.className='word';
+          var i=document.createElement('span');i.className='word-inner';
+          i.style.transitionDelay=wi*0.06+'s';i.textContent=p;
+          w.appendChild(i);t.appendChild(w);wi++}
+        })
+      }else if(n.nodeType===1){
+        if(n.tagName==='BR'){t.appendChild(document.createElement('br'))}
+        else{var w=document.createElement('span');w.className='word';
+        var i=document.createElement('span');i.className='word-inner';
+        i.style.transitionDelay=wi*0.06+'s';i.appendChild(n.cloneNode(true));
+        w.appendChild(i);t.appendChild(w);wi++}
+      }
+    }
+    var ch=Array.from(el.childNodes);el.innerHTML='';
+    ch.forEach(function(c){proc(c,el)})
+  }
+  function init(){
+    var els=document.querySelectorAll('[data-animate]');
+    var splits=document.querySelectorAll('[data-split]');
+    splits.forEach(function(el){splitText(el)});
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');obs.unobserve(e.target)}})
+    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){
+      if(el.getBoundingClientRect().top<window.innerHeight)el.classList.add('in-view');
+      obs.observe(el)
+    });
+    splits.forEach(function(el){
+      if(el.getBoundingClientRect().top<window.innerHeight){
+        requestAnimationFrame(function(){requestAnimationFrame(function(){el.classList.add('in-view')})})
+      }else{obs.observe(el)}
+    });
+    document.documentElement.classList.add('animate-ready');
+    if(window.matchMedia('(pointer:fine)').matches){
+      document.querySelectorAll('.btn-primary').forEach(function(btn){
+        btn.addEventListener('mousemove',function(e){
+          var r=btn.getBoundingClientRect();
+          btn.style.transition='none';
+          btn.style.transform='translate('+(e.clientX-(r.left+r.width/2))*0.28+'px,'+(e.clientY-(r.top+r.height/2))*0.38+'px)'
+        });
+        btn.addEventListener('mouseleave',function(){
+          btn.style.transition='transform 0.5s cubic-bezier(0.23,1,0.32,1)';btn.style.transform=''
+        })
+      })
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
+})()
+          `}
+        </Script>
       </body>
     </html>
   )

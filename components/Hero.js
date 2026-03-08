@@ -1,15 +1,14 @@
 import Link from 'next/link'
-import HeroParallax from './HeroParallax'
 import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants'
 
 export default function Hero() {
   return (
-    <HeroParallax>
+    <section className="hero" id="home">
       <div className="hero-inner">
         <span className="hero-label">
           Clinical Case Management · Nationwide · HQ Los Angeles, CA
         </span>
-        <h1>
+        <h1 data-split>
           Clinical case management for the
           <br />
           <em>whole person.</em>
@@ -30,6 +29,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-    </HeroParallax>
+    </section>
   )
 }
