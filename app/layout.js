@@ -1,4 +1,5 @@
 import { Cormorant_Garamond, Jost } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import CrisisBar from '@/components/CrisisBar'
 import Nav from '@/components/Nav'
@@ -63,6 +64,8 @@ const schemaOrg = {
   description:
     'Nationwide clinical case management for substance use, mental health, co-occurring disorders, and intervention services. Headquartered in Los Angeles, California.',
   url: SITE_URL,
+  logo: `${SITE_URL}/icon.svg`,
+  image: `${SITE_URL}/opengraph-image`,
   telephone: '+17024947641',
   email: EMAIL,
   priceRange: '$$$',
@@ -121,17 +124,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${jost.variable}`}>
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N3BJGHJ6C" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-9N3BJGHJ6C');
-            `,
-          }}
+        <link rel="preload" href="/hero-bg.jpg" as="image" fetchPriority="high" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9N3BJGHJ6C"
+          strategy="afterInteractive"
         />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9N3BJGHJ6C');
+          `}
+        </Script>
         <meta name="geo.region" content="US-CA" />
         <meta name="geo.placename" content="Los Angeles, California" />
         <meta name="geo.position" content="34.0522;-118.2437" />

@@ -1,23 +1,10 @@
-'use client'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import HeroParallax from './HeroParallax'
 import { PHONE_HREF, PHONE_DISPLAY } from '@/lib/constants'
 
 export default function Hero() {
-  const heroRef = useRef(null)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!heroRef.current) return
-      const y = window.scrollY * 0.4
-      heroRef.current.style.backgroundPosition = `center calc(45% + ${y}px)`
-    }
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <section className="hero" id="home" ref={heroRef}>
+    <HeroParallax>
       <div className="hero-inner">
         <span className="hero-label">
           Clinical Case Management · Nationwide · HQ Los Angeles, CA
@@ -43,6 +30,6 @@ export default function Hero() {
           </a>
         </div>
       </div>
-    </section>
+    </HeroParallax>
   )
 }

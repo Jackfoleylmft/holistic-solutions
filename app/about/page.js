@@ -5,7 +5,7 @@ import { processSteps } from '@/lib/content'
 import { SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 export const metadata = {
-  title: 'About | Holistic Solutions Case Management — Jack Foley, LMFT',
+  title: 'About Holistic Solutions | Jack Foley, LMFT',
   description: 'Jack Foley, LMFT — founder of Holistic Solutions. Licensed clinician in recovery, advocating for individuals and families navigating substance use and mental health.',
   alternates: { canonical: `${SITE_URL}/about` },
 }
