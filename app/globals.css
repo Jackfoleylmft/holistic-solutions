@@ -204,15 +204,14 @@ nav a:hover { color: var(--adobe); }
   padding: 140px 5vw 100px;
   position: relative;
   overflow: hidden;
-  background-image: url('/hero-bg.jpg');
-  background-size: cover;
-  background-position: center 45%;
-  background-repeat: no-repeat;
 }
-.hero::before {
-  content: '';
+.hero > img {
+  z-index: 0;
+}
+.hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(to right,
       rgba(242,237,228,0.82) 0%,
@@ -221,7 +220,7 @@ nav a:hover { color: var(--adobe); }
     radial-gradient(ellipse 60% 70% at 80% 50%, rgba(196,168,130,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
-.hero-inner { max-width: 700px; position: relative; }
+.hero-inner { max-width: 700px; position: relative; z-index: 2; }
 .hero-label {
   display: inline-block;
   font-size: 0.7rem;
