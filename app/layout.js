@@ -4,7 +4,8 @@ import './globals.css'
 import CrisisBar from '@/components/CrisisBar'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import FloatingCTA from '@/components/FloatingCTA'
+import dynamic from 'next/dynamic'
+const FloatingCTA = dynamic(() => import('@/components/FloatingCTA'), { ssr: false })
 import { PHONE_HREF, EMAIL, SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
