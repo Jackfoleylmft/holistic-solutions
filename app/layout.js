@@ -3,8 +3,8 @@ import Script from 'next/script'
 import './globals.css'
 import CrisisBar from '@/components/CrisisBar'
 import Footer from '@/components/Footer'
+import Nav from '@/components/Nav'
 import dynamic from 'next/dynamic'
-const Nav = dynamic(() => import('@/components/Nav'), { ssr: false })
 const FloatingCTA = dynamic(() => import('@/components/FloatingCTA'), { ssr: false })
 import { PHONE_HREF, EMAIL, SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 

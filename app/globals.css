@@ -888,7 +888,12 @@ footer a:hover { color: var(--clay); }
   }
   h1 { text-shadow: 0 1px 12px rgba(242,237,228,0.6); }
   .crisis-bar { font-size: 0.75rem; }
-  nav { top: 0; }
+  nav {
+    top: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(242, 237, 228, 0.97);
+  }
   nav ul { display: none; }
   .hamburger { display: flex; }
   #services .section-head,
@@ -1453,6 +1458,9 @@ body::after {
   90%  { background-position: -180px 0 }
 }
 @media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; }
+}
+@media (max-width: 768px) {
   body::after { animation: none; }
 }
 
