@@ -105,7 +105,7 @@ export default function OpioidAddictionCaseManagement() {
               A licensed case manager brings clinical expertise to every decision point. We assess the full picture — substance use severity, medical history, co-occurring conditions, prior treatment — and build a care plan that addresses the complexity. We coordinate medically supervised detox, evaluate MAT options when appropriate, place clients at programs equipped for opioid use disorder, and manage every transition through long-term recovery.
             </p>
             <p className="service-page-body">
-              The opioid crisis has reshaped the treatment landscape. Fentanyl has changed the clinical calculus around detox. MAT has become a critical evidence-based option that not all providers understand or support equally. Navigating these realities requires a case manager with clinical depth — not just a referral service.
+              The opioid crisis has reshaped the treatment landscape. <Link href="/blog/fentanyl-addiction-what-families-need-to-know">Fentanyl has changed the clinical calculus</Link> around detox. MAT has become a critical evidence-based option that not all providers understand or support equally. Navigating these realities requires a case manager with clinical depth — not just a referral service.
             </p>
 
             <p className="service-page-body" style={{ marginTop: '1.5rem' }}>

@@ -112,6 +112,11 @@ export default function BlogPostPage({ params }) {
                 {block.items.map((item, j) => <li key={j}>{item}</li>)}
               </ul>
             )
+            if (block.type === 'p-link') return (
+              <p key={i}>
+                {block.textBefore}<Link href={block.href}>{block.linkText}</Link>{block.textAfter || ''}
+              </p>
+            )
             if (block.type === 'bio') return (
               <div key={i} className="article-bio">
                 <p>{block.text}</p>
