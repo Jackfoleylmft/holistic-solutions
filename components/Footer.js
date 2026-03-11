@@ -44,6 +44,12 @@ export default function Footer() {
           <Link href="/privacy">Privacy Policy</Link> · <Link href="/terms">Terms of Service</Link> ·{' '}
           <Link href="/hipaa">HIPAA Notice</Link>
         </p>
+        <p style={{ marginTop: '0.5rem', fontSize: '0.72rem', color: 'var(--adobe)' }}>
+          Website by{' '}
+          <a href="https://chiefcomplaintmedia.com" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+            Chief Complaint Media
+          </a>
+        </p>
       </div>
     </footer>
   )
