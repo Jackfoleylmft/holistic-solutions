@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Opioid Addiction Case Management | Holistic Solutions',
     description: 'Case management for opioid addiction. Licensed clinicians coordinating detox, MAT, residential treatment, and long-term recovery. Nationwide. Confidential.',
     url: `${SITE_URL}/opioid-addiction-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/opioid-addiction-case-management',
+  name: 'Opioid Addiction Case Management',
+  description: 'Case management for opioid addiction. Licensed clinicians coordinating detox, MAT, residential treatment, and long-term recovery. Nationwide. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Opioid Addiction Case Management',
+}
+
 const faqs = [
   { q: 'What does an opioid addiction case manager do?', a: 'An opioid addiction case manager coordinates the full continuum of care — from clinical assessment and medically assisted detox through residential treatment, medication-assisted treatment (MAT), step-down programs, and long-term recovery support. They manage treatment placement, provider coordination, care transitions, and family communication.' },
   { q: 'Do you coordinate medication-assisted treatment (MAT)?', a: 'Yes. Medication-assisted treatment — including buprenorphine (Suboxone), methadone, and naltrexone (Vivitrol) — is an evidence-based approach for opioid use disorder. We coordinate MAT as part of a comprehensive treatment plan, connecting clients with prescribing providers and monitoring the overall care trajectory.' },
@@ -84,6 +100,7 @@ export default function OpioidAddictionCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">Substance Use · Opioids</p>

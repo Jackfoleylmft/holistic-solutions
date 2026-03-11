@@ -4,7 +4,7 @@ import { SITE_URL } from '@/lib/constants'
 
 export default function sitemap() {
   const base = SITE_URL
-  const siteLastUpdated = '2026-03-02'
+  const siteLastUpdated = '2026-03-11'
 
   const staticPages = [
     { url: base, changeFrequency: 'monthly', priority: 1, lastModified: siteLastUpdated },

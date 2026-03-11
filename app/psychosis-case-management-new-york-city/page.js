@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Psychosis Case Management NYC | Holistic Solutions',
     description: 'Psychosis case management in New York City. Licensed clinicians specializing in psychotic disorders, first-episode psychosis, and substance-induced psychosis.',
     url: `${SITE_URL}/psychosis-case-management-new-york-city`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/psychosis-case-management-new-york-city',
+  name: 'Psychosis Case Management New York City',
+  description: 'Psychosis case management in New York City. Licensed clinicians specializing in psychotic disorders, first-episode psychosis, and substance-induced psychosis.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'City', name: 'New York City' },
+  serviceType: 'Psychosis Case Management',
+}
+
 const faqs = [
   { q: 'What does a psychosis case manager do in New York City?', a: 'A psychosis case manager in New York City coordinates psychiatric stabilization, treatment placement, medication management oversight, provider coordination, and long-term recovery planning for individuals experiencing psychotic disorders, first-episode psychosis, or substance-induced psychosis. At Holistic Solutions, this work is led by licensed clinicians with deep expertise in psychosis.' },
   { q: 'Do you work with first-episode psychosis in New York City?', a: 'Yes. First-episode psychosis requires a specialized response — early intervention, proper psychiatric evaluation, and a coordinated care plan. We work closely with families navigating a first episode in the NYC area, providing clinical assessment, treatment placement, and ongoing case management.' },
@@ -84,6 +100,7 @@ export default function PsychosisCaseManagementNewYorkCity() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">New York City · Psychosis</p>

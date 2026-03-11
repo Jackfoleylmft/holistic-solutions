@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Substance Use Case Management NYC | Holistic Solutions',
     description: 'Substance use case management in New York City. Licensed clinicians coordinating detox, residential, PHP, IOP, and outpatient care across NYC. Confidential.',
     url: `${SITE_URL}/substance-use-case-management-new-york-city`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/substance-use-case-management-new-york-city',
+  name: 'Substance Use Case Management New York City',
+  description: 'Substance use case management in New York City. Licensed clinicians coordinating detox, residential, PHP, IOP, and outpatient care across NYC. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'City', name: 'New York City' },
+  serviceType: 'Substance Use Case Management',
+}
+
 const faqs = [
   { q: 'What does a substance use case manager do in New York City?', a: 'A substance use case manager in New York City coordinates every aspect of care for someone struggling with alcohol or drug use disorders. This includes clinical assessment, treatment placement at vetted NYC-area programs, transitions between levels of care (detox, residential, PHP, IOP, outpatient), provider coordination, and ongoing recovery support. At Holistic Solutions, every case manager is a licensed clinician.' },
   { q: 'What treatment programs do you work with in New York City?', a: 'We maintain a vetted network of treatment programs across the New York metro area. This includes detox facilities, residential treatment centers, PHP and IOP programs, sober living homes, and outpatient providers. We have evaluated these programs and maintain ongoing relationships with their clinical teams.' },
@@ -84,6 +100,7 @@ export default function SubstanceUseCaseManagementNewYorkCity() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">New York City · Substance Use</p>

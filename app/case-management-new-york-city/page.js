@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Case Management New York City | Holistic Solutions',
     description: 'Clinical case management in New York City for substance use, psychosis, and co-occurring disorders. Licensed clinicians, in-person and remote. Confidential.',
     url: `${SITE_URL}/case-management-new-york-city`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -78,6 +79,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/case-management-new-york-city',
+  name: 'Clinical Case Management New York City',
+  description: 'Clinical case management in New York City for substance use, psychosis, and co-occurring disorders. Licensed clinicians, in-person and remote. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'City', name: 'New York City' },
+  serviceType: 'Clinical Case Management',
+}
+
 const localSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
@@ -112,6 +128,7 @@ export default function CaseManagementNewYorkCity() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localSchema) }} />
 
       <section className="page-header">

@@ -11,6 +11,7 @@ export const metadata = {
     title: 'First Episode Psychosis Case Management | Holistic Solutions',
     description: 'Case management for first-episode psychosis. Licensed clinicians coordinating early intervention, psychiatric care, and family support. Nationwide. Confidential.',
     url: `${SITE_URL}/first-episode-psychosis-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/first-episode-psychosis-case-management',
+  name: 'First Episode Psychosis Case Management',
+  description: 'Case management for first-episode psychosis. Licensed clinicians coordinating early intervention, psychiatric care, and family support. Nationwide. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'First Episode Psychosis Case Management',
+}
+
 const faqs = [
   { q: 'What is first-episode psychosis?', a: 'First-episode psychosis (FEP) refers to the first time a person experiences psychotic symptoms — such as hallucinations, delusions, or disordered thinking — to a degree that significantly impairs their functioning. It most commonly occurs in late adolescence or early adulthood and can be caused by a primary psychotic disorder, substance use, or other medical conditions.' },
   { q: 'Why is early intervention important for first-episode psychosis?', a: 'Research consistently shows that early intervention in psychosis leads to better long-term outcomes. The duration of untreated psychosis (DUP) — the time between symptom onset and treatment — is one of the strongest predictors of recovery. Getting the right care quickly matters enormously.' },
@@ -84,6 +100,7 @@ export default function FirstEpisodePsychosisCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">Psychosis · First Episode</p>

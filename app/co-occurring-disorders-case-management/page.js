@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Co-Occurring Disorders Case Management | Holistic Solutions',
     description: 'Integrated case management for co-occurring disorders and dual diagnosis. Substance use and mental health addressed together. Nationwide. Confidential.',
     url: `${SITE_URL}/co-occurring-disorders-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -78,6 +79,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/co-occurring-disorders-case-management',
+  name: 'Co-Occurring Disorders Case Management',
+  description: 'Integrated case management for co-occurring disorders and dual diagnosis. Substance use and mental health addressed together. Nationwide. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Co-Occurring Disorders Case Management',
+}
+
 const faqs = [
   {
     q: 'What are co-occurring disorders?',
@@ -110,6 +126,7 @@ export default function CoOccurringDisordersCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Page header */}
       <section className="page-header">

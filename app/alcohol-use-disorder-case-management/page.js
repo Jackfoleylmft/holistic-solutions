@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Alcohol Use Disorder Case Management | Holistic Solutions',
     description: 'Case management for alcohol use disorder. Licensed clinicians coordinating detox, treatment, and recovery across every level of care. Nationwide. Confidential.',
     url: `${SITE_URL}/alcohol-use-disorder-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/alcohol-use-disorder-case-management',
+  name: 'Alcohol Use Disorder Case Management',
+  description: 'Case management for alcohol use disorder. Licensed clinicians coordinating detox, treatment, and recovery across every level of care. Nationwide. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Alcohol Use Disorder Case Management',
+}
+
 const faqs = [
   { q: 'What does an alcohol use disorder case manager do?', a: 'An alcohol use disorder case manager coordinates the full continuum of care — from clinical assessment and medical detox through residential treatment, step-down programs, and long-term recovery support. They manage treatment placement, provider coordination, care transitions, and family communication throughout the process.' },
   { q: 'Does alcohol detox require medical supervision?', a: 'Yes. Alcohol withdrawal can be medically dangerous and potentially life-threatening. Medical detox provides 24/7 monitoring, medication management, and clinical oversight to ensure safety during withdrawal. We coordinate placement at medically supervised detox facilities and manage the transition to the next level of care.' },
@@ -84,6 +100,7 @@ export default function AlcoholUseDisorderCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">Substance Use · Alcohol</p>

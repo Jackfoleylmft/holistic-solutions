@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Dual Diagnosis Case Management Los Angeles | Holistic Solutions',
     description: 'Dual diagnosis case management in Los Angeles for co-occurring substance use and mental health disorders. Licensed clinicians. Integrated care. Confidential.',
     url: `${SITE_URL}/dual-diagnosis-case-management-los-angeles`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/dual-diagnosis-case-management-los-angeles',
+  name: 'Dual Diagnosis Case Management Los Angeles',
+  description: 'Dual diagnosis case management in Los Angeles for co-occurring substance use and mental health disorders. Licensed clinicians. Integrated care. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'City', name: 'Los Angeles' },
+  serviceType: 'Co-Occurring Disorders Case Management',
+}
+
 const faqs = [
   { q: 'What is dual diagnosis case management?', a: 'Dual diagnosis case management is clinical coordination for individuals who have both a substance use disorder and a mental health condition — such as addiction and depression, alcoholism and anxiety, or substance use and psychosis. A dual diagnosis case manager ensures both conditions are treated together, not separately, through integrated care planning and provider coordination.' },
   { q: 'What dual diagnosis presentations do you work with in Los Angeles?', a: 'We work with a wide range of co-occurring presentations including substance use with depression, addiction with PTSD, alcoholism with anxiety disorders, substance use with bipolar disorder, and substance-induced psychosis. Our clinical expertise is deepest at the intersection of substance use and psychotic disorders.' },
@@ -84,6 +100,7 @@ export default function DualDiagnosisCaseManagementLosAngeles() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">Los Angeles · Dual Diagnosis</p>

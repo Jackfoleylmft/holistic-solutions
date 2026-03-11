@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Psychosis Case Management | Holistic Solutions',
     description: "Case management for psychosis led by a licensed clinician with deep psychiatric expertise. Nationwide coordination for families and individuals. Confidential.",
     url: `${SITE_URL}/psychosis-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -78,6 +79,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/psychosis-case-management',
+  name: 'Psychosis Case Management',
+  description: 'Case management for psychosis led by a licensed clinician with deep psychiatric expertise. Nationwide coordination for families and individuals. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Psychosis Case Management',
+}
+
 const faqs = [
   {
     q: 'What is psychosis case management?',
@@ -110,6 +126,7 @@ export default function PsychosisCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Page header */}
       <section className="page-header">

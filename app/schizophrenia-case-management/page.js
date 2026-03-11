@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Schizophrenia Case Management | Holistic Solutions',
     description: 'Case management for schizophrenia and schizoaffective disorder. Licensed clinicians coordinating psychiatric care, treatment, and recovery. Nationwide.',
     url: `${SITE_URL}/schizophrenia-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/schizophrenia-case-management',
+  name: 'Schizophrenia Case Management',
+  description: 'Case management for schizophrenia and schizoaffective disorder. Licensed clinicians coordinating psychiatric care, treatment, and recovery. Nationwide.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Schizophrenia Case Management',
+}
+
 const faqs = [
   { q: 'What does a schizophrenia case manager do?', a: 'A schizophrenia case manager coordinates the full spectrum of care — psychiatric stabilization, medication management oversight, treatment placement, provider coordination, housing support, and long-term recovery planning. At Holistic Solutions, this work is led by licensed clinicians with deep expertise in psychotic disorders.' },
   { q: 'Can you help if my loved one has been diagnosed with schizoaffective disorder?', a: 'Yes. Schizoaffective disorder combines features of schizophrenia with mood disorder symptoms. We provide case management for the full spectrum of psychotic disorders, including schizoaffective disorder, with coordinated psychiatric and therapeutic support.' },
@@ -84,6 +100,7 @@ export default function SchizophreniaCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">Psychosis · Schizophrenia</p>

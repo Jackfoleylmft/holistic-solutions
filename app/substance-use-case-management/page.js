@@ -7,6 +7,12 @@ export const metadata = {
   description: "Substance use case management by a master's-level LMFT. Coordinated care across every level, nationwide. Call (702) 494-7641. Confidential.",
   keywords: 'substance use case management, substance abuse case management, addiction case management, licensed case manager addiction, behavioral health case management nationwide',
   alternates: { canonical: `${SITE_URL}/substance-use-case-management` },
+  openGraph: {
+    title: 'Substance Use Case Management | Holistic Solutions',
+    description: "Substance use case management by a master's-level LMFT. Coordinated care across every level, nationwide. Call (702) 494-7641. Confidential.",
+    url: `${SITE_URL}/substance-use-case-management`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
+  },
 }
 
 const faqSchema = {
@@ -73,6 +79,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/substance-use-case-management',
+  name: 'Substance Use Case Management',
+  description: "Substance use case management by a master's-level LMFT. Coordinated care across every level of care, nationwide.",
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Substance Use Case Management',
+}
+
 const faqs = [
   {
     q: 'What is substance use case management?',
@@ -105,6 +126,7 @@ export default function SubstanceUseCaseManagement() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Page header */}
       <section className="page-header">

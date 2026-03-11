@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Psychosis Case Management Los Angeles | Holistic Solutions',
     description: 'Psychosis case management in Los Angeles. Licensed clinicians specializing in psychotic disorders, first-episode psychosis, and substance-induced psychosis.',
     url: `${SITE_URL}/psychosis-case-management-los-angeles`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/psychosis-case-management-los-angeles',
+  name: 'Psychosis Case Management Los Angeles',
+  description: 'Psychosis case management in Los Angeles. Licensed clinicians specializing in psychotic disorders, first-episode psychosis, and substance-induced psychosis.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'City', name: 'Los Angeles' },
+  serviceType: 'Psychosis Case Management',
+}
+
 const faqs = [
   { q: 'What does a psychosis case manager do in Los Angeles?', a: 'A psychosis case manager in Los Angeles coordinates psychiatric stabilization, treatment placement, medication management oversight, provider coordination, and long-term recovery planning for individuals experiencing psychotic disorders, first-episode psychosis, or substance-induced psychosis. At Holistic Solutions, this work is led by licensed clinicians with deep expertise in psychosis.' },
   { q: 'Do you work with first-episode psychosis in Los Angeles?', a: 'Yes. First-episode psychosis requires a specialized response — early intervention, proper psychiatric evaluation, and a coordinated care plan that addresses the full clinical picture. We work closely with families navigating a first episode, providing clinical assessment, treatment placement, and ongoing case management in the LA area.' },
@@ -84,6 +100,7 @@ export default function PsychosisCaseManagementLosAngeles() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">Los Angeles · Psychosis</p>

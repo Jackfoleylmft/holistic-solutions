@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Clinical Intervention Services | Holistic Solutions',
     description: "Interventions led by master's-level licensed clinicians — not just certified interventionists. For substance use and psychiatric crises. Nationwide. Confidential.",
     url: `${SITE_URL}/clinical-intervention-services`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -78,6 +79,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/clinical-intervention-services',
+  name: 'Clinical Intervention Services',
+  description: "Interventions led by master's-level licensed clinicians — not just certified interventionists. For substance use and psychiatric crises. Nationwide.",
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'Country', name: 'United States' },
+  serviceType: 'Clinical Intervention Services',
+}
+
 const faqs = [
   {
     q: 'What is a clinical intervention?',
@@ -110,6 +126,7 @@ export default function ClinicalInterventionServices() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Page header */}
       <section className="page-header">

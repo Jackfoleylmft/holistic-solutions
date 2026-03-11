@@ -11,6 +11,7 @@ export const metadata = {
     title: 'Dual Diagnosis Case Management NYC | Holistic Solutions',
     description: 'Dual diagnosis case management in New York City for co-occurring substance use and mental health disorders. Licensed clinicians. Integrated care. Confidential.',
     url: `${SITE_URL}/dual-diagnosis-case-management-new-york-city`,
+    images: [{ url: '/opengraph-image', width: 1200, height: 630 }],
   },
 }
 
@@ -71,6 +72,21 @@ const breadcrumbSchema = {
   ],
 }
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://hscasemanagement.com/dual-diagnosis-case-management-new-york-city',
+  name: 'Dual Diagnosis Case Management New York City',
+  description: 'Dual diagnosis case management in New York City for co-occurring substance use and mental health disorders. Licensed clinicians. Integrated care. Confidential.',
+  provider: {
+    '@type': 'MedicalBusiness',
+    '@id': 'https://hscasemanagement.com',
+    name: 'Holistic Solutions Case Management',
+  },
+  areaServed: { '@type': 'City', name: 'New York City' },
+  serviceType: 'Co-Occurring Disorders Case Management',
+}
+
 const faqs = [
   { q: 'What is dual diagnosis case management?', a: 'Dual diagnosis case management is clinical coordination for individuals who have both a substance use disorder and a mental health condition. A dual diagnosis case manager ensures both conditions are treated together through integrated care planning, proper treatment placement, and ongoing provider coordination.' },
   { q: 'Do you provide dual diagnosis case management in New York City?', a: 'Yes. We travel to New York City regularly for in-person assessments, clinical interventions, and companionship services. We maintain a vetted network of dual diagnosis treatment programs across the NYC metro area and coordinate care with local providers.' },
@@ -84,6 +100,7 @@ export default function DualDiagnosisCaseManagementNewYorkCity() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       <section className="page-header">
         <p className="section-label">New York City · Dual Diagnosis</p>
