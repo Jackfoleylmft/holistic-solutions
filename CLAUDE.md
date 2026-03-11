@@ -4,14 +4,6 @@
 The live website for Holistic Solutions Case Management (hscasemanagement.com).
 Next.js App Router. Deployed to Vercel via `vercel --prod` (auto-deploy not connected).
 
-## SEO OS
-Planning, tracking, and audits live in the SEO OS workspace:
-`/Users/jack/Desktop/bh-seo-os-workspace/projects/hs-case-management/`
-
-At the start of every session, read:
-- `DASHBOARD.md` — current project state, open tasks, what's next
-- `ops/page-status.md` — status of every page
-
 ## Deployment
 - Git remote: github.com/Jackfoleylmft/holistic-solutions (main branch)
 - Deploy: `git push origin main && vercel --prod`
