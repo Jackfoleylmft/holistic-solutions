@@ -24,6 +24,7 @@ export default function Contact() {
       if (res.ok) {
         setStatus('success')
         e.target.reset()
+        window.gtag?.('event', 'generate_lead', { method: 'contact_form' })
       } else {
         setStatus('error')
       }
@@ -43,7 +44,7 @@ export default function Contact() {
         <div className="contact-info">
           <div className="contact-item">
             <h4>Phone</h4>
-            <p><a href={PHONE_HREF}>{PHONE_DISPLAY}</a></p>
+            <p><a href={PHONE_HREF} onClick={() => window.gtag?.('event', 'click', { event_category: 'phone_number' })}>{PHONE_DISPLAY}</a></p>
           </div>
           <div className="contact-item">
             <h4>Email</h4>
