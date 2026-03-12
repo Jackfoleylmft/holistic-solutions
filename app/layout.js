@@ -152,7 +152,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <CrisisBar />
         <FloatingCTA />
-        <Script id="animations" strategy="lazyOnload">
+        <Script id="animations" strategy="afterInteractive">
           {`
 (function(){
   function splitText(el){
