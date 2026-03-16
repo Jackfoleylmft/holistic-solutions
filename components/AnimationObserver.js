@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 
 function splitText(el) {
@@ -67,8 +67,16 @@ function initMagnetic() {
 
 export default function AnimationObserver() {
   const pathname = usePathname()
+  const isFirstMount = useRef(true)
 
   useEffect(() => {
+    // On initial mount the inline script in layout.js already handled animations.
+    // Skip the reset so we don't conflict — just mark first mount done.
+    if (isFirstMount.current) {
+      isFirstMount.current = false
+      return
+    }
+
     document.documentElement.classList.remove('animate-ready')
 
     const els = document.querySelectorAll('[data-animate]')

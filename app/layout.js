@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Nav from '@/components/Nav'
 import dynamic from 'next/dynamic'
 const FloatingCTA = dynamic(() => import('@/components/FloatingCTA'), { ssr: false })
+const AnimationObserver = dynamic(() => import('@/components/AnimationObserver'), { ssr: false })
 import { PHONE_HREF, EMAIL, SITE_URL, BUSINESS_NAME } from '@/lib/constants'
 
 const cormorant = Cormorant_Garamond({
@@ -152,6 +153,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <CrisisBar />
         <FloatingCTA />
+        <AnimationObserver />
         <Script id="animations" strategy="afterInteractive">
           {`
 (function(){
