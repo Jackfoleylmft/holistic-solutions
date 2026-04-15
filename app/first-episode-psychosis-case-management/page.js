@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'First Episode Psychosis Case Management | Holistic Solutions',
   description: 'Case management for first-episode psychosis. Licensed clinicians coordinating early intervention, psychiatric care, and family support. Nationwide. Confidential.',
   keywords: 'first episode psychosis case management, FEP case manager, first psychotic episode help, early psychosis intervention, first episode psychosis treatment',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/first-episode-psychosis-case-management` },
   openGraph: {
     title: 'First Episode Psychosis Case Management | Holistic Solutions',
@@ -113,6 +115,8 @@ export default function FirstEpisodePsychosisCaseManagement() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>When psychosis happens for the first time</h2>
             <p className="service-page-body">

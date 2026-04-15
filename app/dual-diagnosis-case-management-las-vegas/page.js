@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Dual Diagnosis Case Management Las Vegas | Holistic Solutions',
   description: 'Dual diagnosis case management in Las Vegas and Nevada. Licensed clinicians specializing in co-occurring substance use and mental health disorders. Confidential.',
   keywords: 'dual diagnosis case management las vegas, co-occurring disorders las vegas, dual diagnosis treatment nevada, mental health substance use las vegas, co-occurring disorders case manager nevada',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/dual-diagnosis-case-management-las-vegas` },
   openGraph: {
     title: 'Dual Diagnosis Case Management Las Vegas | Holistic Solutions',
@@ -113,6 +115,8 @@ export default function DualDiagnosisCaseManagementLasVegas() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Co-occurring disorders in a city that compounds them</h2>
             <p className="service-page-body">

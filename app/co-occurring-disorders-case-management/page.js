@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Co-Occurring Disorders Case Management | Holistic Solutions',
   description: 'Integrated case management for co-occurring disorders and dual diagnosis. Substance use and mental health addressed together. Nationwide. Confidential.',
   keywords: 'co-occurring disorders case management, dual diagnosis case manager, integrated treatment planning, substance use and mental health, dual diagnosis support nationwide',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/co-occurring-disorders-case-management` },
   openGraph: {
     title: 'Co-Occurring Disorders Case Management | Holistic Solutions',
@@ -141,6 +143,8 @@ export default function CoOccurringDisordersCaseManagement() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Why integrated case management matters</h2>
             <p className="service-page-body">

@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Opioid Addiction Case Management | Holistic Solutions',
   description: 'Case management for opioid addiction. Licensed clinicians coordinating detox, MAT, residential treatment, and long-term recovery. Nationwide. Confidential.',
   keywords: 'opioid addiction case management, opioid case manager, fentanyl addiction case management, heroin case management, opioid use disorder case manager, MAT case management',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/opioid-addiction-case-management` },
   openGraph: {
     title: 'Opioid Addiction Case Management | Holistic Solutions',
@@ -113,6 +115,8 @@ export default function OpioidAddictionCaseManagement() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Clinical case management for opioid use disorder</h2>
             <p className="service-page-body">

@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Alcohol Use Disorder Case Management | Holistic Solutions',
   description: 'Case management for alcohol use disorder. Licensed clinicians coordinating detox, treatment, and recovery across every level of care. Nationwide. Confidential.',
   keywords: 'alcohol use disorder case management, alcoholism case manager, alcohol addiction case management, AUD case management, alcohol detox case manager',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/alcohol-use-disorder-case-management` },
   openGraph: {
     title: 'Alcohol Use Disorder Case Management | Holistic Solutions',
@@ -113,6 +115,8 @@ export default function AlcoholUseDisorderCaseManagement() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Clinical case management for alcohol use disorder</h2>
             <p className="service-page-body">

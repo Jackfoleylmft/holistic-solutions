@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Case Management Las Vegas | Holistic Solutions',
   description: 'Clinical case management in Las Vegas for substance use, mental health, and co-occurring disorders. Jack Foley, LMFT — Las Vegas native, building the clinical network this community needs.',
   keywords: 'case management las vegas, substance use case manager las vegas, mental health case management nevada, behavioral health las vegas, clinical case management nevada, addiction case manager las vegas',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/case-management-las-vegas` },
   openGraph: {
     title: 'Case Management Las Vegas | Holistic Solutions',
@@ -149,6 +151,8 @@ export default function CaseManagementLasVegas() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Rooted in Las Vegas. Committed to closing the gap.</h2>
             <p className="service-page-body">

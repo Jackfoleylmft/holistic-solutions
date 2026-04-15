@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Schizophrenia Case Management | Holistic Solutions',
   description: 'Case management for schizophrenia and schizoaffective disorder. Licensed clinicians coordinating psychiatric care, treatment, and recovery. Nationwide.',
   keywords: 'schizophrenia case management, schizophrenia case manager, schizoaffective disorder case management, schizophrenia treatment coordination, psychotic disorder case manager',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/schizophrenia-case-management` },
   openGraph: {
     title: 'Schizophrenia Case Management | Holistic Solutions',
@@ -113,6 +115,8 @@ export default function SchizophreniaCaseManagement() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Clinical case management for schizophrenia</h2>
             <p className="service-page-body">

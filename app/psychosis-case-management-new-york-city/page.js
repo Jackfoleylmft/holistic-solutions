@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Psychosis Case Management NYC | Holistic Solutions',
   description: 'Psychosis case management in New York City. Licensed clinicians specializing in psychotic disorders, first-episode psychosis, and substance-induced psychosis.',
   keywords: 'psychosis case management new york city, psychosis case manager NYC, first episode psychosis new york, schizophrenia case management NYC, substance induced psychosis new york city',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/psychosis-case-management-new-york-city` },
   openGraph: {
     title: 'Psychosis Case Management NYC | Holistic Solutions',
@@ -113,6 +115,8 @@ export default function PsychosisCaseManagementNewYorkCity() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Specialized psychosis support in New York City</h2>
             <p className="service-page-body">

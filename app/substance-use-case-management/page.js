@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Substance Use Case Management | Holistic Solutions',
   description: "Substance use case management by a master's-level LMFT. Coordinated care across every level, nationwide. Call (702) 494-7641. Confidential.",
   keywords: 'substance use case management, substance abuse case management, addiction case management, licensed case manager addiction, behavioral health case management nationwide',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/substance-use-case-management` },
   openGraph: {
     title: 'Substance Use Case Management | Holistic Solutions',
@@ -141,6 +143,8 @@ export default function SubstanceUseCaseManagement() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>What is substance use case management?</h2>
             <p className="service-page-body">

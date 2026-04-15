@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
 export const metadata = {
   title: 'Clinical Intervention Services | Holistic Solutions',
   description: "Interventions led by master's-level licensed clinicians — not just certified interventionists. For substance use and psychiatric crises. Nationwide. Confidential.",
   keywords: 'clinical intervention services, masters level interventionist, licensed clinician intervention, addiction intervention, family intervention services, psychiatric intervention',
+  authors: [{ name: 'Jack Foley, LMFT', url: `${SITE_URL}/about` }],
   alternates: { canonical: `${SITE_URL}/clinical-intervention-services` },
   openGraph: {
     title: 'Clinical Intervention Services | Holistic Solutions',
@@ -141,6 +143,8 @@ export default function ClinicalInterventionServices() {
       <section>
         <div className="service-page-layout">
           <div className="service-page-main">
+            <AuthorByline />
+
             <p className="section-label">Overview</p>
             <h2>Why clinical interventions are different</h2>
             <p className="service-page-body">
