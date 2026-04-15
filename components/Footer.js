@@ -17,6 +17,7 @@ export default function Footer() {
           <p className="footer-heading">Locations</p>
           <Link href="/case-management-los-angeles">Los Angeles</Link>
           <Link href="/case-management-new-york-city">New York City</Link>
+          <Link href="/case-management-las-vegas">Las Vegas</Link>
           <p className="footer-heading" style={{ marginTop: '1rem' }}>Specialties</p>
           <Link href="/alcohol-use-disorder-case-management">Alcohol Use Disorder</Link>
           <Link href="/opioid-addiction-case-management">Opioid Addiction</Link>

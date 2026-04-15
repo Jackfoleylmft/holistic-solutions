@@ -22,6 +22,7 @@ export default function sitemap() {
     { url: `${base}/clinical-intervention-services`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-06' },
     { url: `${base}/case-management-los-angeles`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-07' },
     { url: `${base}/case-management-new-york-city`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-03-07' },
+    { url: `${base}/case-management-las-vegas`, changeFrequency: 'monthly', priority: 0.9, lastModified: '2026-04-14' },
     { url: `${base}/substance-use-case-management-los-angeles`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
     { url: `${base}/substance-use-case-management-new-york-city`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
     { url: `${base}/psychosis-case-management-los-angeles`, changeFrequency: 'monthly', priority: 0.85, lastModified: '2026-03-07' },
