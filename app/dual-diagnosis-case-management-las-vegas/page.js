@@ -180,7 +180,7 @@ export default function DualDiagnosisCaseManagementLasVegas() {
                 We also provide <Link href="/substance-use-case-management-las-vegas">substance use case management in Las Vegas</Link> for clients whose primary presentation is addiction, and <Link href="/psychosis-case-management-las-vegas">psychosis case management in Las Vegas</Link> for clients with psychotic disorders — including those with co-occurring substance use. When resistance to treatment is the primary barrier, our <Link href="/clinical-intervention-services">clinical intervention services</Link> can help families take the first step.
               </p>
               <p className="service-page-body">
-                For a full overview of our Las Vegas services, see our <Link href="/case-management-las-vegas">Las Vegas case management hub</Link>. For national co-occurring disorders services, see <Link href="/co-occurring-disorders-case-management">co-occurring disorders case management</Link>.
+                For a full overview of our Las Vegas services, see our <Link href="/case-management-las-vegas">Las Vegas case management hub</Link>. For national co-occurring disorders services, see <Link href="/co-occurring-disorders-case-management">co-occurring disorders case management</Link>. For context on the Las Vegas behavioral health landscape, read <Link href="/blog/behavioral-health-las-vegas">behavioral health in Las Vegas: what makes this city different</Link>.
               </p>
             </div>
           </div>

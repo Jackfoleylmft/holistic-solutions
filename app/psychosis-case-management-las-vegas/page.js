@@ -180,7 +180,7 @@ export default function PsychosisCaseManagementLasVegas() {
                 Psychosis frequently co-occurs with substance use — a combination that requires specialized integrated care. We also provide <Link href="/substance-use-case-management-las-vegas">substance use case management in Las Vegas</Link> and <Link href="/dual-diagnosis-case-management-las-vegas">dual diagnosis case management in Las Vegas</Link> for clients with both presentations.
               </p>
               <p className="service-page-body">
-                For a full overview of our Las Vegas services, see our <Link href="/case-management-las-vegas">Las Vegas case management hub</Link>. For national psychosis services, see <Link href="/psychosis-case-management">psychosis case management</Link>.
+                For a full overview of our Las Vegas services, see our <Link href="/case-management-las-vegas">Las Vegas case management hub</Link>. For national psychosis services, see <Link href="/psychosis-case-management">psychosis case management</Link>. For context on the Las Vegas behavioral health landscape, read <Link href="/blog/behavioral-health-las-vegas">behavioral health in Las Vegas: what makes this city different</Link>.
               </p>
             </div>
           </div>

@@ -180,7 +180,7 @@ export default function SubstanceUseCaseManagementLasVegas() {
                 Substance use in Las Vegas frequently co-occurs with mental health conditions. We also provide <Link href="/psychosis-case-management-las-vegas">psychosis case management in Las Vegas</Link> and <Link href="/dual-diagnosis-case-management-las-vegas">dual diagnosis case management in Las Vegas</Link> for clients navigating both. When resistance to treatment is the barrier, our <Link href="/clinical-intervention-services">clinical intervention services</Link> can help families move forward.
               </p>
               <p className="service-page-body">
-                For a full overview of our Las Vegas services, see our <Link href="/case-management-las-vegas">Las Vegas case management hub</Link>. For national information, see <Link href="/substance-use-case-management">substance use case management</Link>.
+                For a full overview of our Las Vegas services, see our <Link href="/case-management-las-vegas">Las Vegas case management hub</Link>. For national information, see <Link href="/substance-use-case-management">substance use case management</Link>. For context on the Las Vegas behavioral health landscape, read <Link href="/blog/behavioral-health-las-vegas">behavioral health in Las Vegas: what makes this city different</Link>.
               </p>
             </div>
           </div>
