@@ -14,10 +14,21 @@ export default function Footer() {
           <Link href="/services">All Services</Link>
         </div>
         <div className="footer-col">
-          <p className="footer-heading">Locations</p>
-          <Link href="/case-management-los-angeles">Los Angeles</Link>
-          <Link href="/case-management-new-york-city">New York City</Link>
-          <Link href="/case-management-las-vegas">Las Vegas</Link>
+          <p className="footer-heading">Las Vegas</p>
+          <Link href="/case-management-las-vegas">Case Management — Las Vegas</Link>
+          <Link href="/substance-use-case-management-las-vegas">Substance Use — Las Vegas</Link>
+          <Link href="/psychosis-case-management-las-vegas">Psychosis — Las Vegas</Link>
+          <Link href="/dual-diagnosis-case-management-las-vegas">Dual Diagnosis — Las Vegas</Link>
+          <p className="footer-heading" style={{ marginTop: '1rem' }}>Los Angeles</p>
+          <Link href="/case-management-los-angeles">Case Management — Los Angeles</Link>
+          <Link href="/substance-use-case-management-los-angeles">Substance Use — Los Angeles</Link>
+          <Link href="/psychosis-case-management-los-angeles">Psychosis — Los Angeles</Link>
+          <Link href="/dual-diagnosis-case-management-los-angeles">Dual Diagnosis — Los Angeles</Link>
+          <p className="footer-heading" style={{ marginTop: '1rem' }}>New York City</p>
+          <Link href="/case-management-new-york-city">Case Management — NYC</Link>
+          <Link href="/substance-use-case-management-new-york-city">Substance Use — NYC</Link>
+          <Link href="/psychosis-case-management-new-york-city">Psychosis — NYC</Link>
+          <Link href="/dual-diagnosis-case-management-new-york-city">Dual Diagnosis — NYC</Link>
           <p className="footer-heading" style={{ marginTop: '1rem' }}>Specialties</p>
           <Link href="/alcohol-use-disorder-case-management">Alcohol Use Disorder</Link>
           <Link href="/opioid-addiction-case-management">Opioid Addiction</Link>

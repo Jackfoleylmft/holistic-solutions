@@ -10,6 +10,7 @@ const serviceLinks = [
   { href: '/psychosis-case-management', label: 'Psychosis Case Management' },
   { href: '/co-occurring-disorders-case-management', label: 'Co-Occurring Disorders' },
   { href: '/clinical-intervention-services', label: 'Clinical Intervention Services' },
+  { href: '/case-management-las-vegas', label: 'Case Management — Las Vegas' },
   { href: '/case-management-los-angeles', label: 'Case Management — Los Angeles' },
   { href: '/case-management-new-york-city', label: 'Case Management — New York City' },
 ]

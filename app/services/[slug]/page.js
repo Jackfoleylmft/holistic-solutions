@@ -38,14 +38,20 @@ export default function ServicePage({ params }) {
     .filter((p) => p.relatedServices && p.relatedServices.includes(service.slug))
     .slice(0, 3)
 
+  const canonicalUrl = seoCanonicalOverrides[service.slug]
+    ? `${SITE_URL}${seoCanonicalOverrides[service.slug]}`
+    : `${SITE_URL}/services/${service.slug}`
+
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
+    '@id': canonicalUrl,
     name: service.title,
     description: service.metaDescription,
-    url: `${SITE_URL}/services/${service.slug}`,
+    url: canonicalUrl,
     provider: {
-      '@type': 'Organization',
+      '@type': 'MedicalBusiness',
+      '@id': SITE_URL,
       name: BUSINESS_NAME,
       url: SITE_URL,
     },
@@ -59,14 +65,29 @@ export default function ServicePage({ params }) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
       { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
-      { '@type': 'ListItem', position: 3, name: service.title, item: `${SITE_URL}/services/${service.slug}` },
+      { '@type': 'ListItem', position: 3, name: service.title, item: canonicalUrl },
     ],
   }
+
+  const faqSchema = service.faqs && service.faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: service.faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      }
+    : null
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      )}
 
       {/* Page header */}
       <section className="page-header">
@@ -82,6 +103,9 @@ export default function ServicePage({ params }) {
           <div className="service-page-main">
             <p className="section-label">Overview</p>
             <h2>About this service</h2>
+            {service.definition && (
+              <p className="service-page-body" style={{ fontWeight: 500 }}>{service.definition}</p>
+            )}
             {service.overview.map((p, i) => (
               <p key={i} className="service-page-body">{p}</p>
             ))}
@@ -152,6 +176,31 @@ export default function ServicePage({ params }) {
             ))}
         </div>
       </section>
+
+      {service.faqs && service.faqs.length > 0 && (
+        <section style={{ background: 'var(--white)' }}>
+          <p className="section-label">Frequently Asked Questions</p>
+          <h2>Common questions, honest answers.</h2>
+          <div className="faq-grid" style={{ marginTop: '2.5rem' }}>
+            <div>
+              {service.faqs.slice(0, Math.ceil(service.faqs.length / 2)).map((item) => (
+                <details key={item.q}>
+                  <summary>{item.q}<span className="faq-icon" aria-hidden="true">+</span></summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+            </div>
+            <div>
+              {service.faqs.slice(Math.ceil(service.faqs.length / 2)).map((item) => (
+                <details key={item.q}>
+                  <summary>{item.q}<span className="faq-icon" aria-hidden="true">+</span></summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {relatedPosts.length > 0 && (
         <section>
