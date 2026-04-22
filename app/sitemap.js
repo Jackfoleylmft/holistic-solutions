@@ -13,7 +13,7 @@ const canonicalElsewhereSlugs = new Set([
 
 export default function sitemap() {
   const base = SITE_URL
-  const siteLastUpdated = '2026-04-16'
+  const siteLastUpdated = '2026-04-21'
 
   const staticPages = [
     { url: base, changeFrequency: 'monthly', priority: 1, lastModified: siteLastUpdated },
