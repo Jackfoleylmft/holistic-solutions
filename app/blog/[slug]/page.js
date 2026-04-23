@@ -48,9 +48,11 @@ export default function BlogPostPage({ params }) {
     ...(post.image && { image: `${SITE_URL}${post.image}` }),
     author: {
       '@type': 'Person',
+      '@id': `${SITE_URL}/about#jack-foley`,
       name: 'Jack Foley',
       jobTitle: 'Licensed Marriage and Family Therapist',
       url: `${SITE_URL}/about`,
+      hasCredential: ['LMFT', 'M.S. Clinical Psychology'],
     },
     publisher: {
       '@type': 'Organization',
@@ -84,7 +86,16 @@ export default function BlogPostPage({ params }) {
           mainEntity: post.faq.map(({ q, a }) => ({
             '@type': 'Question',
             name: q,
-            acceptedAnswer: { '@type': 'Answer', text: a },
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: a,
+              author: {
+                '@type': 'Person',
+                '@id': `${SITE_URL}/about#jack-foley`,
+                name: 'Jack Foley',
+                hasCredential: ['LMFT'],
+              },
+            },
           })),
         }) }} />
       )}
@@ -147,9 +158,15 @@ export default function BlogPostPage({ params }) {
             <div className="article-references">
               <h2>References</h2>
               <ol>
-                {post.references.map((ref, i) => (
-                  <li key={i}>{ref}</li>
-                ))}
+                {post.references.map((ref, i) => {
+                  const urlMatch = ref.match(/https?:\/\/[^\s]+/)
+                  if (urlMatch) {
+                    const url = urlMatch[0]
+                    const before = ref.slice(0, ref.indexOf(url))
+                    return <li key={i}>{before}<a href={url} target="_blank" rel="noopener noreferrer">{url}</a></li>
+                  }
+                  return <li key={i}>{ref}</li>
+                })}
               </ol>
             </div>
           )}
