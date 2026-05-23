@@ -212,6 +212,12 @@ export default function ClinicalInterventionServices() {
               <cite>— Jack Foley, LMFT · Founder, Holistic Solutions</cite>
             </div>
 
+            <div style={{ marginTop: '2rem' }}>
+              <p className="service-page-body">
+                For a full definitional walkthrough — what a clinical intervention is, how it differs from a Johnson Model intervention, when it is appropriate, and what realistically happens during and after — see our explainer on <Link href="/blog/what-is-a-clinical-intervention">what is a clinical intervention</Link>.
+              </p>
+            </div>
+
             <div style={{ marginTop: '3rem' }}>
               <p className="section-label">When Psychiatric Complexity Is Present</p>
               <h2>Interventions involving psychosis, trauma, or co-occurring conditions</h2>
