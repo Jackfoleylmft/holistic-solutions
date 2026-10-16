@@ -18,11 +18,19 @@ const personSchema = {
   description:
     'Founder and Clinical Director of Holistic Solutions Case Management. Specializes in substance use disorders, co-occurring conditions, and psychosis. Over a decade of clinical experience in behavioral health case management.',
   url: `${SITE_URL}/about`,
-  worksFor: {
-    '@type': 'Organization',
-    name: BUSINESS_NAME,
-    url: SITE_URL,
-  },
+  worksFor: [
+    {
+      '@type': 'Organization',
+      name: BUSINESS_NAME,
+      url: SITE_URL,
+    },
+    {
+      '@type': 'MedicalClinic',
+      name: 'Bodhi Wellness Collective',
+      url: 'https://bodhiwellnesscollective.com',
+    },
+  ],
+  sameAs: ['https://bodhiwellnesscollective.com/about'],
   hasCredential: [
     {
       '@type': 'EducationalOccupationalCredential',

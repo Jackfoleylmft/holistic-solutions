@@ -58,12 +58,20 @@ export default function Founder() {
             including when they show up together, which they often do.
           </p>
           <p>
+            As the work grew, so did the team around it. In 2026 I co-founded{' '}
+            <a href="https://bodhiwellnesscollective.com" style={{ color: 'inherit', textDecoration: 'underline', textUnderlineOffset: 3 }}>Bodhi Wellness Collective</a>{' '}
+            in Hermosa Beach, a practice that brings therapists, a psychiatrist, and a neuropsychologist
+            together under one roof. Holistic Solutions still coordinates care for families across the
+            country. For families in Southern California, Bodhi is where ongoing therapy, psychiatry, and
+            testing can continue with clinicians who work as one team.
+          </p>
+          <p>
             If you're reading this, you're probably trying to figure out what to do next. I'd be
             honored to help you figure that out.
           </p>
           <div className="founder-sign">
             <p>— Jack Foley</p>
-            <span>LMFT · Founder, Holistic Solutions LLC · Los Angeles, CA</span>
+            <span>LMFT · Founder, Holistic Solutions LLC · Co-founder, Bodhi Wellness Collective</span>
           </div>
         </div>
       </div>

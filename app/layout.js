@@ -97,6 +97,7 @@ const schemaOrg = {
     sameAs: [
       'https://www.linkedin.com/in/jack-foley-m-a-lmft-25a462133/',
       'https://www.therapyden.com/therapist/jack-foley',
+      'https://bodhiwellnesscollective.com/about',
     ],
     hasCredential: ['LMFT', 'M.S. Clinical Psychology', 'B.S. Psychology'],
     knowsAbout: [

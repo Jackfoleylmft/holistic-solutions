@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import BodhiNote from '@/components/BodhiNote'
 import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
@@ -240,6 +241,7 @@ export default function PsychosisCaseManagementLosAngeles() {
         </div>
       </section>
 
+      <BodhiNote href="https://bodhiwellnesscollective.com/psychosis-therapy-south-bay" linkText="Bodhi Wellness Collective" />
       <HomeCTA />
     </>
   )

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HomeCTA from '@/components/HomeCTA'
+import BodhiNote from '@/components/BodhiNote'
 import AuthorByline from '@/components/AuthorByline'
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/constants'
 
@@ -237,6 +238,7 @@ export default function DualDiagnosisCaseManagementLosAngeles() {
         </div>
       </section>
 
+      <BodhiNote href="https://bodhiwellnesscollective.com/addiction-treatment" linkText="Bodhi Wellness Collective" />
       <HomeCTA />
     </>
   )

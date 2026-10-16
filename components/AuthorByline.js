@@ -7,7 +7,7 @@ export default function AuthorByline() {
         <p style={{ fontSize: '0.68rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: '0.2rem' }}>Clinically reviewed by</p>
         <p style={{ fontSize: '0.82rem', color: 'var(--charcoal)', lineHeight: 1.4 }}>
           <Link href="/about" style={{ color: 'var(--charcoal)', fontWeight: 500 }}>Jack Foley, LMFT</Link>
-          <span style={{ color: 'var(--warm-gray)', marginLeft: '0.4rem' }}>· Founder &amp; Clinical Director, Holistic Solutions</span>
+          <span style={{ color: 'var(--warm-gray)', marginLeft: '0.4rem' }}>· Founder &amp; Clinical Director, Holistic Solutions · Co-founder, Bodhi Wellness Collective</span>
         </p>
       </div>
     </div>

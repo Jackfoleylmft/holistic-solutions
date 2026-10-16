@@ -45,6 +45,8 @@ export default function Footer() {
           <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           <a href={GOOGLE_REVIEW_URL} target="_blank" rel="noopener noreferrer">Leave a Google Review</a>
+          <p className="footer-heading" style={{ marginTop: '1rem' }}>South Bay Clinical Practice</p>
+          <a href="https://bodhiwellnesscollective.com">Bodhi Wellness Collective</a>
         </div>
       </div>
       <div className="footer-bottom">
